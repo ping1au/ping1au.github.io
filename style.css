@@ -1,0 +1,129 @@
+/* Style the header */
+body {
+  background-color: #D1D3D4;
+}
+div.header-container {
+    background-color: #666;
+    /* padding: 30px; */
+    color: white;
+  }
+
+  div.logo-container {
+    background: #000;
+  }
+  
+  div.menu-container {
+    background: #000;
+  }
+
+  div.slogan {
+    text-align: right;
+    font-size: small;
+    padding: auto;
+  }
+  div.contact {
+    font-size: small;
+    padding: auto;
+  } 
+
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: right;
+    width: 100%;
+    background: #ccc;
+    /* padding: 20px; */
+  }
+  
+  /* Style the list inside the menu */
+  /* nav ul {
+    list-style-type: none;
+    padding: 0;
+  } */
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer.footer-container {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  p.comments {
+    text-align: center;
+    padding-bottom: 200px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p#contact {
+    font-size: x-small;
+  }
+
+  a.logo {
+    background-color: #fff;
+  }
+
+  img.logo {
+    max-width: 30%;
+  }
+
+  p.services {
+    text-align: center;
+    color: #F15D3C;
+  }
+
+  section.service {
+    text-align: center;
+    background-image: url("assets/bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
+  section.content {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  button.service-btn {
+    width: fit-content;
+  }
+
+  img.serv-btn {
+    width: 150px;
+  }
+
+  div.fdc-modal {
+    text-align: center;
+  }
+
+  p.intro {
+    text-align: center;
+  }
+
+  h4.h4-services {
+    color: #F15D3C;
+  }
+
+  p.title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: x-large;
+  }

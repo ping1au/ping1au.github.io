@@ -1,0 +1,261 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--self defined CSS-->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>FDC Renovations</title>
+      </head>
+    <body class="d-flex flex-column min-vh-100">
+        <div class="header-container">
+          <div class="row">
+            <div class="col-3 logo-container d-flex align-items-center">
+              <a href="index.html" class="btn-link btn-sm active logo" role="button">
+                <img class = "logo" src = "assets/logo.png"/>
+                <span style="margin-left: 10px;">Renovations</span>
+              </a>
+            </div>
+            <div class="col-9 menu-container">
+              <div class="row">
+                <div class="col-7 slogan d-flex align-items-center">
+                  <span class="align-middle">Call us for a free estimate!</span>
+                </div>
+                <div class="col-5 contact">
+                  514-606-1705<br/>info@fdcfurnishings.com
+                </div>
+              </div>
+              
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <span class="navbar-text">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Gallery
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="gallery/bathrooms.html">Bathrooms</a>
+                          <a class="dropdown-item" href="gallery/kitchens.html">Kitchens</a>
+                          <a class="dropdown-item" href="gallery/basements.html">Basements</a>
+                          <a class="dropdown-item" href="gallery/fireplaces.html">Fireplaces</a>
+                          <a class="dropdown-item" href="gallery/outdoor.html">Outdoor</a>
+                          <a class="dropdown-item" href="gallery/stairs.html">Stairs</a>
+                          <a class="dropdown-item" href="gallery/tiling.html">Tiling</a>
+                          <!-- <div class="dropdown-divider"></div> -->
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="before_after.html">Before & After Photos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">FR</a>
+                      </li>
+                      <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                      </li> -->
+                    </ul>
+                  </span>
+                  <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form> -->
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 buttons for opening modals of different services -->
+        <section class="service">
+          <h3>Select the type of service you need!</h3>
+          <div class="row">
+            <div class="item col-lg-4 col-md-4 col-4">
+              <button type="button" class="btn btn-link service-btn" data-toggle="modal" data-target="#modal-fix">
+                <img class="serv-btn" src="assets/service_fix.webp"/>
+              </button>
+            </div>
+            
+            <div class="item col-lg-4 col-md-4 col-4">
+              <button type="button" class="btn btn-link service-btn" data-toggle="modal" data-target="#modal-renovation">
+                <img class="serv-btn" src="assets/service_renovation.webp"/>
+              </button>
+            </div>
+            <div class="item col-lg-4 col-md-4 col-4"> 
+              <button type="button" class="btn btn-link service-btn" data-toggle="modal" data-target="#modal-design">
+                <img class="serv-btn" src="assets/service_design.webp"/>
+              </button>
+            </div>
+          </div>
+          
+
+          <!-- Modal for FDC Fix-it -->
+          <div class="modal fade" id="modal-fix" tabindex="-1" role="dialog" aria-labelledby="modal-fix" aria-hidden="true">
+            <div class="modal-dialog fdc-modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn btn-link service-btn" data-toggle="modal" data-target="#modal-fix">
+                    <img class="serv-btn" src="assets/service_fix.webp"/>
+                  </button>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body fdc-modal">
+                  <p class="intro">
+                    Do you have a long list of small unfinished home projects or maybe some urgent needed repairs!
+                    Our fix-it division is tailored to complete any misc project whether its indoor or outdoor at a fraction of the cost.
+                  </p>
+                  <div class="row">
+                    <div class="item col-lg-3 col-md-4 col-6 col-sm">
+                      <img class="img-fluid" src="gallery/aluminum_railings.webp" alt="">
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6 col-sm">
+                      <img class="img-fluid" src="gallery/new_corner_shower.webp" alt="">
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6 col-sm">
+                      <img class="img-fluid" src="gallery/new_electric_fireplace.webp" alt="">
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6 col-sm">
+                      <img class="img-fluid" src="gallery/new_ext_access_door.webp" alt="">
+                    </div>
+                  </div>                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal for FDC Renovation-->
+          <div class="modal fade" id="modal-renovation" tabindex="-1" role="dialog" aria-labelledby="modal-fix" aria-hidden="true">
+            <div class="modal-dialog fdc-modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn btn-link service-btn" data-toggle="modal" data-target="#modal-fix">
+                    <img class="serv-btn" src="assets/service_renovation.webp"/>
+                  </button>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body fdc-modal">
+                  <p class="intro">
+                    FDC has a complete qualified & experienced team to deliver full turnkey service.
+                    Whether its a Bathroom, Kitchen, Basement or any other we will guide you through 
+                    the process and complete your project on time and on budget.
+                  </p>
+                  <div class="row">
+                    <div class="item col-lg-3 col-md-4 col-6 col-sm">
+                      <img class="img-fluid" src="gallery/fireplace.webp" alt="">
+                    </div>
+                    
+                  </div>                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal for FDC Design-->
+          <div class="modal fade" id="modal-design" tabindex="-1" role="dialog" aria-labelledby="modal-fix" aria-hidden="true">
+            <div class="modal-dialog fdc-modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn btn-link service-btn" data-toggle="modal" data-target="#modal-fix">
+                    <img class="serv-btn" src="assets/service_design.webp"/>
+                  </button>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body fdc-modal">
+                  <p class="intro">
+                    Interior designers assisting and guiding customers to make
+                    plans and designs unique to their home and personnal tastes. 
+                    Using various 3D software and tools of the trade
+                    we will help you visualize and make your project come to life.
+                  </p>
+                  <div class="row">
+                    <div class="item col-lg-12 col-md-12 col-12">
+                      <img class="img-fluid" src="gallery/design.webp" alt="">
+                    </div>
+                    <div class="item col-lg-6 col-md-6 col-6">
+                      <img class="img-fluid" src="gallery/floorplan1.webp" alt="">
+                    </div>
+                    
+                  </div>                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--introduction content-->
+        <section class="content">
+          
+          <div class="row">
+            <div class="item col-lg-8 col-md-8 col-8">
+              <p class="intro">
+                FDC is a unique company offering customers the best quality and value in residential renovations through its 3 divisions.<br/>
+      From large Turnkey renovations to smaller jobs we will complete your project on time at prices that are hard to beat.<br/>
+      And take note we do not outsource work, all our workers are skilled in their trades so you can be assured work is completed to local codes with no shortcuts.
+              </p>
+              <h4 class="h4-services">Our expertise:</h4>
+              <p class="services">
+                Electrical, Plumbing, Kitchens, Bathrooms,
+                Framing Ceramics, Flooring, Drywalling & Painting,
+                Hardwood Stairs, Fireplaces, Interior Finishing Decks/Pergolas,
+                Aluminum railings, Attic insulation
+              </p>
+            </div>
+            
+            <div class="item col-lg-2 col-md-2 col-2">
+              <img class="img-fluid" src="assets/homepage_sample1.webp" alt="sample1">
+            </div>
+            <div class="item col-lg-2 col-md-2 col-2">
+              <img class="img-fluid" src="assets/homepage_sample2.webp" alt="sample2">
+            </div>
+            
+          </div>
+        </section>
+        
+
+        <!-- footer -->
+        <footer class="footer-container mt-auto">
+            <p>DOLLARD-DES-ORMEAUX, PIERREFONDS, ROXBORO, BEACONSFIELD, KIRKLAND,<br/>
+              SAINT-ANNE-DE-BELLEVUE, SENNEVILLE, BAIE D’URFÉ, L’ÎLE-BIZARD, POINTE-CLAIRE, DORVAL, LACHINE, <br/>
+              L’ÎLE-PERROT, SAINT-LAZARE, HUDSON, VAUDREUIL, RIGAUD, LES CÈDRES, SAINT-CLET</p>
+            <a href="index.html" class="btn btn-link btn-sm active" role="button" aria-pressed="true">
+              <img class = "logo" src = "assets/logo.png"/>
+            </a>
+            <p id="contact">
+              Roger Larin faslrs FDC Ameublement<br/>
+              802 Saint-Robert, Saint Lazare, QC J7T 2M4<br/>
+              514 606 1705<br/>
+              rogerlarin.fdc@gmail.com<br/>
+            </p>
+        </footer>
+    </body>
+</html>
