@@ -24,28 +24,28 @@ class MyHeader extends HTMLElement {
                   <span class="navbar-text">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item active">
-                        <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="https://ping1au.github.io">HOME <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="testimonials.html">TESTIMONIALS</a>
+                        <a class="nav-link" href="https://ping1au.github.io/testimonials.html">TESTIMONIALS</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           GALLERY
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="gallery/bathrooms.html">Bathrooms</a>
-                          <a class="dropdown-item" href="gallery/kitchens.html">Kitchens</a>
-                          <a class="dropdown-item" href="gallery/basements.html">Basements</a>
-                          <a class="dropdown-item" href="gallery/fireplaces.html">Fireplaces</a>
-                          <a class="dropdown-item" href="gallery/outdoor.html">Outdoor</a>
-                          <a class="dropdown-item" href="gallery/stairs.html">Stairs</a>
-                          <a class="dropdown-item" href="gallery/tiling.html">Tiling</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/bathrooms.html">Bathrooms</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/kitchens.html">Kitchens</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/basements.html">Basements</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/fireplaces.html">Fireplaces</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/outdoor.html">Outdoor</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/stairs.html">Stairs</a>
+                          <a class="dropdown-item" href="https://ping1au.github.io/gallery/tiling.html">Tiling</a>
                           <!-- <div class="dropdown-divider"></div> -->
                         </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="before_after.html">BEFORE & AFTER PHOTOS</a>
+                        <a class="nav-link" href="https://ping1au.github.io/before_after.html">BEFORE & AFTER PHOTOS</a>
                       </li>
                       
                       <li class="nav-item">
@@ -80,7 +80,7 @@ class MyHeader extends HTMLElement {
             <p>DOLLARD-DES-ORMEAUX, PIERREFONDS, ROXBORO, BEACONSFIELD, KIRKLAND,<br/>
               SAINT-ANNE-DE-BELLEVUE, SENNEVILLE, BAIE D’URFÉ, L’ÎLE-BIZARD, POINTE-CLAIRE, DORVAL, LACHINE, <br/>
               L’ÎLE-PERROT, SAINT-LAZARE, HUDSON, VAUDREUIL, RIGAUD, LES CÈDRES, SAINT-CLET</p>
-            <a href="index.html" class="btn btn-link btn-sm active" role="button" aria-pressed="true">
+            <a href="https://ping1au.github.io" class="btn btn-link btn-sm active" role="button" aria-pressed="true">
               <img class = "logo-footer" src = "assets/logo.png"/>
             </a>
             <div class="mt-xl-4"></div>
