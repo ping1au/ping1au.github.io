@@ -77,8 +77,13 @@ div.header-container {
     font-family: "Eras Demi ITC", sans-serif;
   }
 
+  section.content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   p.comments {
-    text-align: center;
+    text-align: justify;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* padding-bottom: 200px; */
   }
 
@@ -162,4 +167,5 @@ div.header-container {
     padding-bottom: 20px; */
     text-align: center;
     font-size: x-large;
+    font-family: "Eras Bold ITC",  sans-serif ;;
   }
