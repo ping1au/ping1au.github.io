@@ -27,7 +27,7 @@ class MyHeader extends HTMLElement {
                         <a class="nav-link" href="https://ping1au.github.io">HOME <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="https://ping1au.github.io/testimonials.html">TESTIMONIALS</a>
+                        <a class="nav-link" href="testimonials.html">TESTIMONIALS</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +45,7 @@ class MyHeader extends HTMLElement {
                         </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="https://ping1au.github.io/before_after.html">BEFORE & AFTER PHOTOS</a>
+                        <a class="nav-link" href="before_after.html">BEFORE & AFTER PHOTOS</a>
                       </li>
                       
                       <li class="nav-item">
