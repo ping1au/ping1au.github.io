@@ -27,7 +27,7 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
   const galleryArray: { imageUrl: string; title: string }[] = [];
 
   images?.forEach((value, index) => {
-    const url =  "http://localhost:3000/images/" + folder +"/"+value;
+    const url =  "https://ping1au.github.io/images/" + folder +"/"+value;
     const galleryObj = { imageUrl: url, title: (index + 1).toString() };
     galleryArray.push(galleryObj);
   });
