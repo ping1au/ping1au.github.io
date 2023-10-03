@@ -57,8 +57,9 @@ export default async function Page({ params }: { params: { slug: string } })  {
     // </main>
 }
 
-export function generateStaticParams() {
-    return galleryPages.map((page) => ({ page }))
+export async function generateStaticParams() {
+    return [{slug:'fdc_fix'}, {slug:'fdc_renovations'}, {slug:'fdc_design'}];
+    // return galleryPages.map((page) => ({ page }))
     // return [{ slug: 'basements' }, 
     //         { slug: 'bathrooms' }, 
     //         { slug: 'fireplaces' }, 

@@ -6,6 +6,8 @@ import { getImages } from '../../_components/getImage';
 
 import Image from 'next/image';
 
+const galleryPages = ['basements', 'bathrooms', 'fireplaces', 'kitchens', 'outdoor', 'stairs', 'tilings'];
+
 export default async function Page({ params }: { params: { slug: string } })  {
     const { slug } = params;
 
@@ -27,10 +29,15 @@ export default async function Page({ params }: { params: { slug: string } })  {
     // </main>
 }
 
-export function generateStaticParams() {
-    const galleryPages = ['basements', 'bathrooms', 'fireplaces', 'kitchens', 'outdoor', 'stairs', 'tilings'];
-
-    return galleryPages;
+export async function generateStaticParams() {
+    return [{slug:'basements'}, 
+    {slug:'bathrooms'}, 
+    {slug:'fireplaces'},
+    {slug:'kitchens'}, 
+    {slug:'outdoor'},
+    {slug:'stairs'}, 
+    {slug:'tilings'}];
+    // return galleryPages.map((page) => ({ page }))
     // return [{ slug: 'basements' }, 
     //         { slug: 'bathrooms' }, 
     //         { slug: 'fireplaces' }, 
