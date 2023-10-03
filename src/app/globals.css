@@ -78,6 +78,13 @@ div.gallery-container {
   margin-left: 1em;
   margin-right: 1em;
 }
+
+div.footer-container {
+  text-align: center;
+  color: white;
+  font-family: 'Eras Demi ITC';
+}
+
 /* div.slogan {
   float: left;
   width: 80%;
@@ -100,6 +107,9 @@ div.navbar-container {
   margin-bottom: 0.4em;
 }
 
+.field-header {
+  font-weight: bold;
+}
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
