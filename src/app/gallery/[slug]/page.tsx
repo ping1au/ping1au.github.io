@@ -1,8 +1,8 @@
 import React from 'react'
 import Footer from "../../_components/footer";
 import Navigation from "../../_components/footer";
-import Gallery from "../Gallery";
-import { getImages } from '../getImage';
+import Gallery from "../../_components/Gallery";
+import { getImages } from '../../_components/getImage';
 
 import Image from 'next/image';
 
