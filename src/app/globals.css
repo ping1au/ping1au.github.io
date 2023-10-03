@@ -2,7 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+div.slogan, div.contact {
+  /* text-align: right; */
+  color: white;
+  font-weight: bold;
+  font-family: 'Eras Demi ITC';
+}
+
+div.footer-container {
+  text-align: center;
+  color: white;
+  font-family: 'Eras Demi ITC';
+}
+
+div.footer-logo-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.page-container {
+  background-image: url("/images/bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed; 
+}
+
+div.title-container, .service-container {
+  font-family: 'Eras Bold ITC';
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+div.comment-container {
+  font-family: 'Myriad Pro';
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 15em;
+  text-align: justify;
+}
+
+div.intro-container {
+  font-family: 'Eras Bold ITC';
+  margin:2em;
+  text-align: center;
+}
+
+div.remarks-container {
+  font-family: 'Myriad Pro';
+  text-align: center;
+  text-decoration: underline;
+  color: #F15A29;
+}
+
+div.ba-header {
+  font-family: 'Eras Bold ITC';
+  margin-top: 3em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+div.gallery-header {
+  font-family: 'Eras Bold ITC';
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.before-image, .after-image {
+  padding: 1em;
+}
+
+div.gallery-container {
+  
+  font-family: 'Myriad Pro';
+  margin-left: 1em;
+  margin-right: 1em;
+}
+/* div.slogan {
+  float: left;
+  width: 80%;
+  text-align: right;
+  padding: 20px;
+  background: #000000;
+}
+div.contact {
+  text-align: left;
+  width: 20%;
+  background: #fc7894;
+} */
+
+ul.menu-list {
+  color: #F15A29;
+}
+
+div.navbar-container {
+  color: #F15A29;
+  margin-bottom: 0.4em;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +122,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
