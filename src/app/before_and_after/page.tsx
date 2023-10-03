@@ -8,7 +8,7 @@ import { getImages } from '../_components/getImage';
 
 type ImageArray = string[] | undefined;
 
-export default async function Page({ images, onClick }: { images: Array<string> | undefined, onClick?: ImageProps["onClick"] }) {
+export default async function Page({ images }: { images: Array<string> | undefined}) {
 
   /* Reads the content of the gallery sub dir and returns an array of strings */
   const beforeImageFilenames =  await getImages("before");
