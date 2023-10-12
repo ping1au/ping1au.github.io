@@ -28,9 +28,9 @@ const BaGallery: React.FC<MyComponentProps> = ({folder, images}) => {
   });
 
   return (
-    <div className="my-1 w-full gallery-container">
-      <div className=" ">
-        <div className="flex flex-col h-full gap-1 flex-wrap mx-2 md:mx-0">
+    <div className="my-1 gallery-container">
+      <div className="">
+        <div className="flex flex-col h-full gap-1 flex-wrap">
           {galleryArray.map((x, index) => {
             return (
               // <div key={index} className="gallery-container md:h-[50vw] h-screen relative">
@@ -45,15 +45,17 @@ const BaGallery: React.FC<MyComponentProps> = ({folder, images}) => {
               //     </div>
               //   </div>
               // </div>
-              <Image
+              <div className='flex-none text-center fill-current py-4 items-center' key={index}><Image
                     className='ba-image'
-                    width={150}
-                    height={150}
+                    width={400}
+                    height={300}
+                    // layout="fill"
+                    // objectFit="cover"
                     alt={'alt'}
                     src={x.imageUrl}
                     key={x.title}
                     // onClick={onClick ? onClick : undefined}
-                  />
+                  /></div>
             );
           })}
         </div>

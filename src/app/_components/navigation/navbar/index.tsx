@@ -91,7 +91,7 @@ const menuItems: MenuItem[] = [
 const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
     <>
-      <div className="w-full h-auto bg-black sticky top-0">
+      <div className="w-full h-auto bg-black sticky top-0 z-40">
         {/* <div className="container mx-auto px-4 h-full"> */}
         <div className="container pl-1 pr-1 h-full">
           <div className="flex justify-between items-center h-full">

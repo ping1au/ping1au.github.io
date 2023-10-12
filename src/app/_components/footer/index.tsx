@@ -14,25 +14,26 @@ const Footer = () => {
                 
             </div>
            
-            <div className="footer-logo-container flex justify-center self-center items-center">
-                <Link href="/">
+            <div className="footer-logo-container flex justify-center self-center items-center overflow-auto">
+                <Link href="/" className='footer-link'>
                     <Image
+                        className='object-contain'
                         src="/images/logo.png"
-                        width={223}
-                        height={149}
+                        width={56} 
+                        height={37}
                         alt="FDC Logo"
-                        sizes="(max-width: 768px) 100vw,
-                            (max-width: 1200px) 50vw,
-                            33vw"
-                        style={{ width: '100%' }} //The point is right there!
+                        sizes="(max-width: 768px) 33vw,
+                            (max-width: 1200px) 20vw,
+                            10vw"
+                        // style={{ width: '50%' }} //The point is right there!
                         //OR className='w-100 h-100'
                     />
                 </Link>
             </div>
             
             <div className="contact-container">
-                Roger Larin faslrs FDC Ameublement<br/>
-                802 Saint-Robert, Saint Lazare, QC J7T 2M4<br/>
+                
+                <a className="hover:bg-sky-700" href="https://maps.app.goo.gl/zCFcqMGm2FzUWfs78" target='_blank'>Roger Larin faslrs FDC Ameublement<br/>802 Saint-Robert, Saint Lazare, QC J7T 2M4</a><br/>
                 <a className="hover:bg-sky-700" href="tel:+15146061705">
                         <span className="text-lg">✆ </span>514-606-1705</a><br />
                         <a className="hover:bg-sky-700" href="mailto:info@fdcfurnishings.com">

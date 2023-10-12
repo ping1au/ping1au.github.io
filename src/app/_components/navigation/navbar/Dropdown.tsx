@@ -24,12 +24,12 @@ export default function Dropdown(props: Props) {
 
     return (
         <>
-            <div className="relative hidden md:flex gap-x-6 menu-list">
+            <div className="relative hidden md:flex gap-x-6 menu-list z-50">
                 <button
                     className="hover:text-blue-400"
                     onClick={toggle}
                 >{item.title}</button>
-                <div className={`absolute top-8 z-30 w-[250px] min-h-[300px] flex flex-col py-4 bg-white rounded-md gap-x-6 ${transClass}`}>
+                <div className={`dropdown-list absolute top-8 z-30 w-[250px] min-h-[300px] flex flex-col py-4 bg-white rounded-md gap-x-6 ${transClass}`}>
                     {
                         menuItems.map(item =>
                             <Link
@@ -46,7 +46,7 @@ export default function Dropdown(props: Props) {
                 isOpen
                     ?
                     <div
-                        className="fixed top-0 right-0 bottom-0 left-0 z-20 bg-black/40"
+                        className="fixed top-0 right-0 bottom-0 left-0 z-10 bg-black/40"
                         onClick={toggle}
                     ></div>
                     :

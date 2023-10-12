@@ -1,11 +1,13 @@
 import Link from "next/link";
-import {
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownSection,
-    DropdownItem
-} from "@nextui-org/react";
+// import {
+//     Dropdown,
+//     DropdownTrigger,
+//     DropdownMenu,
+//     DropdownSection,
+//     DropdownItem
+// } from "@nextui-org/react";
+import Dropdown from "@/app/_components/navigation/navbar/Dropdown";
+
 
 export interface MenuItem {
   key: number;
@@ -93,7 +95,7 @@ const Sidebar = ({
   return (
     <>
       <div
-        className="sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid pt-[120px] left-0 z-10"
+        className="sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid pt-[120px] left-0 z-50"
         style={{
           opacity: `${isOpen ? "1" : "0"}`,
           top: ` ${isOpen ? "0" : "-100%"}`,
@@ -130,9 +132,47 @@ const Sidebar = ({
               })}
           </ul>
         </div> */}
+        <div className="menu-container">
+          <ul className="sidebar-nav text-center leading-relaxed text-xl" key="parent">
+          {menuItems.map((item, index) => {
+                              return item.hasOwnProperty("children") ? (
+                              <div key = "childrenId">
+                                  <li key="gallery">{item.title}</li>
+                                  <ul key="children">
+                                {/* <li key={index}>
+                                <Link className="text-black hover:text-blue-500 md:flex gap-x-6 menu-list" href={item?.route || ""} 
+                              key = {index} onClick={toggle}>
+                                  {item.title}
+                              </Link>
+                                </li> */}
+                                    {item.children?.map(item =>
+                                        <li key={item.key}>
+                                          <Link
+                                            key={item.key}
+                                            className="hover:bg-zinc-300 hover:text-zinc-500 text-sm"
+                                            href={item?.route || ''}
+                                            onClick={toggle}
+                                        >{item.title}</Link>
+                                        </li>
+                                    )}
+                                </ul>
+                              </div>
+                              
+                              
+                          ) : (
+                              <li key={item.key}>
+                                <Link className="text-black hover:text-blue-500 md:flex gap-x-6 menu-list" href={item?.route || ""} 
+                              onClick={toggle}>
+                                  {item.title}
+                              </Link></li>
+                          );
+                        })}
+          </ul>
+        </div>
         
         
-        <ul className="sidebar-nav text-center leading-relaxed text-xl">
+        
+        {/* <ul className="sidebar-nav text-center leading-relaxed text-xl">
           <li>
             <Link href="/" onClick={toggle}>
               <p>HOME</p>
@@ -149,16 +189,17 @@ const Sidebar = ({
               <li>
                 {menuItems.map((item, index) => {
                     return item.hasOwnProperty("children") ? (
-                    <Link className="hover:text-blue-500 hidden md:flex gap-x-6 menu-list" href={item?.route || ""}
-                      key = {index}>
-                        {item.title}
-                      </Link>
-                    ) : (
-                      <Link className="hover:text-blue-500 hidden md:flex gap-x-6 menu-list" href={item?.route || ""}
-                      key = {index}>
-                        {item.title}
-                      </Link>
-                    );
+                      <span>{item.key}</span>) : <span></span>
+                    // <Link className="hover:text-blue-500 hidden md:flex gap-x-6 menu-list" href={item?.route || ""}
+                    //   key = {index}>
+                    //     {item.title}
+                    //   </Link>
+                    // ) : (
+                    //   <Link className="hover:text-blue-500 hidden md:flex gap-x-6 menu-list" href={item?.route || ""}
+                    //   key = {index}>
+                    //     {item.title}
+                    //   </Link>
+                    // );
                 })}
               </li>
             </ul>
@@ -178,7 +219,7 @@ const Sidebar = ({
               <p>FR</p>
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </>
   );

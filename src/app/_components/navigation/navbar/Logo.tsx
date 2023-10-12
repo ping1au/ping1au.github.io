@@ -18,44 +18,46 @@ const Logo = () => {
     updateWidth();
   }, []);
 
-  // change between the logo and the button when the user scrolls
-  const [showButton, setShowButton] = useState(false);
+  // // change between the logo and the button when the user scrolls
+  // const [showButton, setShowButton] = useState(false);
 
-  const changeNavButton = () => {
-    if (window.scrollY >= 400 && window.innerWidth < 768) {
-      setShowButton(true);
-    } else {
-      setShowButton(false);
-    }
-  };
+  // const changeNavButton = () => {
+  //   if (window.scrollY >= 400 && window.innerWidth < 768) {
+  //     setShowButton(true);
+  //   } else {
+  //     setShowButton(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavButton);
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", changeNavButton);
+  // }, []);
 
   return (
     <>
-    <div className="bg-white">
-    <Link href="/" style={{ display: showButton ? "none" : "block" }}>
+    <div className="">
+    {/* <Link href="/" style={{ display: showButton ? "none" : "block" }}> */}
+    <Link href="/" style={{display:"block"}}>
         <Image
-          src="/images/logo.webp"
+          src="/images/fdclogo.png"
           alt="Logo"
           width={width < 1024 ? "150" : "250"}
           height={width < 1024 ? "45" : "74"}
           // layout="fill"
           // objectFit="cover"
+          
           className="relative"
         />
       </Link>
     </div>
       
-      <div
+      {/* <div
         style={{
           display: showButton ? "block" : "none",
         }}
       >
         <Button />
-      </div>
+      </div> */}
     </>
   );
 };

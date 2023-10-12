@@ -20,29 +20,29 @@ export default async function Page({ params }: { params: { slug: string } })  {
     switch (slug) {
         case 'fdc_fix':
             logoPath = "/images/service_fix.webp";
-            intro = "Do you have a long list of small unfinished home projects or maybe some urgent needed repairs! " +
+            intro = "Do you have a long list of small unfinished home projects or maybe some urgent needed repairs!\n" +
             "Our fix-it division is tailored to complete any misc project at very reasonable costs.";
             break;
         case 'fdc_renovations':
             logoPath = "/images/service_renovations.webp";
-            intro = "FDC has a complete experienced team to deliver full turnkey quality renovations. " +
-            "Whether its a Bathroom, Kitchen, Basement or any other project we will guide you through the process " +
+            intro = "FDC has a complete experienced team to deliver full turnkey quality renovations.\n" +
+            "Whether its a Bathroom, Kitchen, Basement or any other project we will guide you through the process\n" +
             "and complete on time at prices that are hard to beat.";
             break;
         default:
             logoPath = "/images/service_design.webp"
-            intro = "Interior designers assisting and guiding customers using various 3D software " +
-            "to make plans unique to their home and personnal tastes. " +
+            intro = "Interior designers assisting and guiding customers using various 3D software\n" +
+            "to make plans unique to their home and personnal tastes. \n" +
             "We will help you visualize and make your project come to life.";
             remarks = "This service will be fully available in the spring of 2024";
     }
 
     return <main className='min-h-screen'>
-        <div className='flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg'>
-            <div className='pt-20'><img className="object-contain w-40 self-center" src={logoPath}></img>
+        <div className='bg-gray-200 flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
+            <div className='w-full py-16 service-logo-container flex justify-center'><img className="object-contain w-40 self-center" src={logoPath}></img>
             </div>
             <div className='remarks-container text-lg md:text-lg lg:text-xl xl:text-xl'>{remarks}</div>
-            <div className="intro-container sm:px-32 md:px-48 lg:px-64 xl:px-64 text-base md:text-base lg:text-lg xl:text-lg">
+            <div className="intro-container sm:px-16 md:px-32 lg:px-32 xl:px-32 text-base md:text-base lg:text-lg xl:text-lg">
                 {intro}
             </div>
         </div>

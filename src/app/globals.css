@@ -33,6 +33,12 @@ div.title-container, .service-container {
   margin-bottom: 2em;
 }
 
+div.service-logo-container, .testimonial-container {
+  background-image: url("/images/bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed; 
+}
+
 div.comment-container {
   font-family: 'Myriad Pro';
   margin-left: 3em;
@@ -75,8 +81,8 @@ div.gallery-header {
 div.gallery-container {
   
   font-family: 'Myriad Pro';
-  margin-left: 1em;
-  margin-right: 1em;
+  /* margin-left: 1em;
+  margin-right: 1em; */
 }
 
 div.footer-container {
@@ -106,6 +112,10 @@ div.navbar-container {
   color: #F15A29;
   margin-bottom: 0.4em;
 }
+
+/* div.dropdown-list {
+  position: relative;
+} */
 
 .field-header {
   font-weight: bold;
