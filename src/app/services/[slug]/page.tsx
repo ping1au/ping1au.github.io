@@ -3,10 +3,34 @@ import Footer from "../../_components/footer";
 import Navigation from "../../_components/footer";
 import Gallery from "../../_components/Gallery";
 import { getImages } from '../../_components/getImage';
+import { Metadata } from 'next'
+
 
 import Image from 'next/image';
 
 const galleryPages = ['fdc_fix', 'fdc_renovations', 'fdc_design'];
+
+type Props = {
+    params: { id: string }
+  }
+
+export async function generateMetadata(
+    { params }: Props
+  ): Promise<Metadata> {
+    // read route params
+    const id = params.id
+   
+    // // fetch data
+    // const product = await fetch(`https://.../${id}`).then((res) => res.json())
+   
+    // // optionally access and extend (rather than replace) parent metadata
+    // const previousImages = (await parent).openGraph?.images || []
+   
+    return {
+        title: 'FDC-Services',
+        description: 'We offer Fix-it, Renovations and Design services.',
+    }
+  }
 
 export default async function Page({ params }: { params: { slug: string } })  {
     const { slug } = params;

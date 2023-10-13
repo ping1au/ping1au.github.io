@@ -66,7 +66,8 @@ export default function FancyTestimonialsSlider({ testimonials }: { testimonials
         </div>
       </div> */}
       {/* Text */}
-      <div className="mb-9 transition-all duration-150 delay-300 ease-in-out">
+      {/* <div className="mb-9 transition-all duration-150 delay-300 ease-in-out"> */}
+    <div>
         <div className="relative text-justify" ref={testimonialsRef}>
 
           {testimonials.map((testimonial, index) => (
@@ -96,7 +97,8 @@ export default function FancyTestimonialsSlider({ testimonials }: { testimonials
               
             <div key={index} className='w-full'>
                 <div className="relative rounded-xl p-8">
-                    <div className="px-4 relative mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                    {/* <div className="px-4 relative mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex gap-6 dark:bg-slate-800 dark:highlight-white/5"> */}
+                    <div className="px-4 relative mx-auto bg-white ring-1 ring-black/5 rounded-xl flex gap-6">
                         <div  className="w-10 h-10 rounded-full  
                                 inline-flex items-center justify-center
                                 absolute -left-6

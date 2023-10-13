@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "FDC Renovations Homme",
+  description: "Your Project, Our Passion",
+};
+
 import Image from 'next/image'
 import Link from "next/link";
 export default function Home() {

@@ -3,9 +3,6 @@ export const metadata = {
   description: 'Comments from our customers',
 }
 
-import TestimonialImg01 from '@/public/testimonial-01.jpg'
-import TestimonialImg02 from '@/public/testimonial-02.jpg'
-import TestimonialImg03 from '@/public/testimonial-03.jpg'
 import TestimonialSlider from '@/app/_components/TestimonialSlider'
 
 export default function TestimonialSliderPage() {  

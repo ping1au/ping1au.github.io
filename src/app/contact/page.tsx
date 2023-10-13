@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "FDC-Contact",
+  description: "Contact us for a free estimate and more information!",
+}
+
 import React from "react";
 
 const Contact = () => {

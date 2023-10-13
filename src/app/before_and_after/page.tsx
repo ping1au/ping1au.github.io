@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "FDC-Before and After",
+  description: "Areas before and after our renovations",
+}
+
 import React from "react";
 import { promises as fs } from 'fs'
 // import { baGallery } from "../gallery/ba-Gallery";
