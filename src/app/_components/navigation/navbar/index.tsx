@@ -127,8 +127,8 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                       <span className="">
                         <a className="hover:bg-sky-700" href="tel:+15146061705">
                         <span className="text-lg">✆ </span>514-606-1705</a><br />
-                        <a className="hover:bg-sky-700" href="mailto:info@fdcfurnishings.com">
-                        <span className="text-lg">✉ </span>info@fdcfurnishings.com</a>
+                        <a className="hover:bg-sky-700" href="mailto:rogerlarin.fdc@gmail.com">
+                        <span className="text-lg">✉ </span>rogerlarin.fdc@gmail.com</a>
                       </span>
                     </div>
                 </div>

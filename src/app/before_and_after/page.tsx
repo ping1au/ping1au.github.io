@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "FDC-Before and After",
+  title: "FDC Before and After Renovations",
   description: "Areas before and after our renovations",
 }
 
@@ -9,6 +9,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import Image, { ImageProps } from 'next/image';
 import BaGallery from "../_components/BaGallery";
+import ComparisonGallery from "../_components/ComparisonGallery";
 import { getImages } from '../_components/getImage';
 
 type ImageArray = string[] | undefined;
@@ -21,13 +22,40 @@ export default async function Page() {
 
   return (
     <>
+      <div className="container flex flex-col justify-center items-center w-full m-auto">
+        {/* 1st row */}
+          <div className="container grid grid-cols-7 m-auto w-full">
+                {/* before */}
+                <div className="ba-header col-span-3 w-full flex items-center justify-center">
+                        BEFORE
+                </div>
+                {/* arrow */}
+                <div className="gallery-container w-full flex items-center justify-center">
+                        
+                </div>
+                {/* after */}
+                <div className="ba-header col-span-3 w-full flex items-center justify-center">
+                        AFTER
+                </div>
+          </div>
+          
+          {/* 2nd row onwards */}
+          
+        <ComparisonGallery folder="before" images={beforeImageFilenames}/>
+        
+      </div>
+       
+
+       {/* OLD version
        <div className="container grid grid-cols-2 divide-x-4 divide-amber-500 m-auto">
+       
           <div className="before-container flex-col">
               <div className="flex justify-center items-center ba-header self-center">BEFORE</div>
               <div className="gallery-container w-full flex items-center justify-center flex-col">
                   <BaGallery folder="before" images={beforeImageFilenames}  />
               </div>
            </div>
+           <div>Arrow</div>
            <div className="after-container flex-col">
               <div className="flex justify-center items-center ba-header self-center">AFTER</div>
               <div className="gallery-container w-full flex items-center justify-center flex-col">
@@ -36,7 +64,7 @@ export default async function Page() {
                   </div>
               </div>
             </div>
-        </div>
+        </div> */}
      </>
 
   )

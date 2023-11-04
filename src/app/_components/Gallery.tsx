@@ -22,6 +22,7 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
 
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState("");
+  const [index, setIndex] = React.useState(-1);
   const pathname = usePathname();
 
   const galleryArray: { imageUrl: string; title: string }[] = [];
@@ -86,15 +87,16 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
                     className="bg-cover bg-center h-full w-full bg-no-repeat"
                     style={{ backgroundImage: `url("${x.imageUrl}")` }}
                   >
-                    <div className="text-3xl text-white absolute bottom-0 left-2 z-10">
+                    {/* <div className="text-3xl text-white absolute bottom-0 left-2 z-10">
                       <div>{x.title}</div>
-                    </div>
+                    </div> */}
                   </div>
                   <div
                     className="bg-black opacity-0 group-hover:opacity-75 absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out"
                     onClick={() => {
                       setOpen(true);
                       setImage(x.imageUrl);
+                      setIndex(index);
                     }}
                   >
                     <p className="text-white">
@@ -113,6 +115,7 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
         plugins={[Zoom]}
         //showPrevNext={false}
         slides={slides}
+        index={index}
       />
     </div>
     // <>

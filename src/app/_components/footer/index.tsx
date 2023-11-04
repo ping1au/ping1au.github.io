@@ -36,8 +36,8 @@ const Footer = () => {
                 <a className="hover:bg-sky-700" href="https://maps.app.goo.gl/zCFcqMGm2FzUWfs78" target='_blank'>Roger Larin faslrs FDC Ameublement<br/>802 Saint-Robert, Saint Lazare, QC J7T 2M4</a><br/>
                 <a className="hover:bg-sky-700" href="tel:+15146061705">
                         <span className="text-lg">✆ </span>514-606-1705</a><br />
-                        <a className="hover:bg-sky-700" href="mailto:info@fdcfurnishings.com">
-                        <span className="text-lg">✉ </span>info@fdcfurnishings.com</a>
+                        <a className="hover:bg-sky-700" href="mailto:rogerlarin.fdc@gmail.com">
+                        <span className="text-lg">✉ </span>rogerlarin.fdc@gmail.com</a>
             </div>
         </div>
     )

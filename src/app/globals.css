@@ -65,12 +65,14 @@ div.ba-header {
   margin-top: 3em;
   margin-bottom: 2em;
   text-align: center;
+  font-size: large;
+  font-weight: bold;
 }
 
 div.gallery-header {
   font-family: 'Eras Bold ITC';
   margin-top: 2em;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   text-align: center;
 }
 

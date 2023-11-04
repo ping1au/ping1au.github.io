@@ -22,7 +22,11 @@ const BaGallery: React.FC<MyComponentProps> = ({folder, images}) => {
   const galleryArray: { imageUrl: string; title: string }[] = [];
 
   images?.forEach((value, index) => {
-    const url =  "/images/" + folder +"/"+value;
+    let url =  "/images/" + folder +"/"+value;;
+    if (folder == "arrow") {
+      url = "images/arrow.png";
+    } 
+    // const url = "/images/" + folder +"/"+value;
     const galleryObj = { imageUrl: url, title: (index + 1).toString() };
     galleryArray.push(galleryObj);
   });
@@ -30,7 +34,7 @@ const BaGallery: React.FC<MyComponentProps> = ({folder, images}) => {
   return (
     <div className="my-1 gallery-container">
       <div className="">
-        <div className="flex flex-col h-full gap-1 flex-wrap">
+        <div className="flex flex-col gap-1">
           {galleryArray.map((x, index) => {
             return (
               // <div key={index} className="gallery-container md:h-[50vw] h-screen relative">
@@ -45,7 +49,8 @@ const BaGallery: React.FC<MyComponentProps> = ({folder, images}) => {
               //     </div>
               //   </div>
               // </div>
-              <div className='flex-none text-center fill-current py-4 items-center' key={index}><Image
+              <div className='flex-wrap text-center fill-current py-4 items-center' key={index}>
+                <Image
                     className='ba-image'
                     width={400}
                     height={300}
@@ -54,8 +59,10 @@ const BaGallery: React.FC<MyComponentProps> = ({folder, images}) => {
                     alt={'alt'}
                     src={x.imageUrl}
                     key={x.title}
+                    style={{ height: '50%' }}
                     // onClick={onClick ? onClick : undefined}
-                  /></div>
+                  />
+                </div>
             );
           })}
         </div>

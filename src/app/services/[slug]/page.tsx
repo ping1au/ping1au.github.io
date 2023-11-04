@@ -27,7 +27,7 @@ export async function generateMetadata(
     // const previousImages = (await parent).openGraph?.images || []
    
     return {
-        title: 'FDC-Services',
+        title: 'FDC Services',
         description: 'We offer Fix-it, Renovations and Design services.',
     }
   }
@@ -49,16 +49,15 @@ export default async function Page({ params }: { params: { slug: string } })  {
             break;
         case 'fdc_renovations':
             logoPath = "/images/service_renovations.webp";
-            intro = "FDC has a complete experienced team to deliver full turnkey quality renovations.\n" +
-            "Whether its a Bathroom, Kitchen, Basement or any other project we will guide you through the process\n" +
-            "and complete on time at prices that are hard to beat.";
+            intro = "FDC has a complete experienced team to deliver full turnkey quality renovations on time and on budget. \n" +
+            "Whether it's a Bathroom, Kitchen, Basement or any other project we will guide you through the process.\n";
             break;
         default:
             logoPath = "/images/service_design.webp"
-            intro = "Interior designers assisting and guiding customers using various 3D software\n" +
-            "to make plans unique to their home and personnal tastes. \n" +
-            "We will help you visualize and make your project come to life.";
-            remarks = "This service will be fully available in the spring of 2024";
+            intro = "Interior designers assisting and guiding customers through the design phase. \n" +
+            "We will help you visualize and make your project come to life making plans \n" +
+            "unique to their home and personnal tastes using 3D software.";
+            //remarks = "This service will be fully available in the spring of 2024";
     }
 
     return <main className='min-h-screen'>

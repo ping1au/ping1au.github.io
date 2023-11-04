@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "FDC-Contact",
+  title: "Contact FDC Renovations",
   description: "Contact us for a free estimate and more information!",
 }
 
@@ -19,8 +19,8 @@ const Contact = () => {
               </p>
               <p><span className="field-header">Phone:</span></p><p><a className="hover:bg-sky-100" href="tel:+15146061705">
                         <span className="text-lg">✆ </span>514-606-1705</a></p>
-              <p><span className="field-header">Email:</span></p><p><a className="hover:bg-sky-100" href="mailto:info@fdcfurnishings.com">
-                        <span className="text-lg">✉ </span>info@fdcfurnishings.com</a></p>
+              <p><span className="field-header">Email:</span></p><p><a className="hover:bg-sky-100" href="mailto:rogerlarin.fdc@gmail.com">
+                        <span className="text-lg">✉ </span>rogerlarin.fdc@gmail.com</a></p>
           </div>
     </>
   );

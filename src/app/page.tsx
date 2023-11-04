@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "FDC Renovations Homme",
-  description: "Your Project, Our Passion",
+  title: "FDC Renovations",
+  description: "Your Project, Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession.",
 };
 
 import Image from 'next/image'
@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <>
       <div className="flex-col home-container mx-auto px-4">
-        <div className="banner-container">
+        <div className="grid banner-container place-items-center">
                   <Image
                         src="/images/banner.webp"
                         width={1500}
-                        height={1035}
+                        height={400}
                         alt="FDC banner"
                         
-                        style={{ width: '100%' }} //The point is right there!
+                        style={{ width: '45%' }} //The point is right there!
                         //OR className='w-100 h-100'
                     />
         </div>
