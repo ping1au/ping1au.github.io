@@ -57,20 +57,20 @@ export default async function Page({ params }: { params: { slug: string } })  {
             intro = "Interior designers assisting and guiding customers through the design phase. \n" +
             "We will help you visualize and make your project come to life making plans \n" +
             "unique to their home and personnal tastes using 3D software.";
-            //remarks = "This service will be fully available in the spring of 2024";
+            remarks = "This service will be available in spring 2024";
     }
 
     return <main className='min-h-screen'>
-        <div className='bg-gray-200 flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
-            <div className='w-full py-16 service-logo-container flex justify-center'><img className="object-contain w-40 self-center" src={logoPath}></img>
+            <div className='bg-gray-200 flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
+                <div className='w-full py-16 service-logo-container flex justify-center'><img className="object-contain w-40 self-center" src={logoPath}></img>
+                </div>
+                <div className='remarks-container text-lg md:text-lg lg:text-xl xl:text-xl'>{remarks}</div>
+                <div className="intro-container sm:px-16 md:px-32 lg:px-32 xl:px-32 text-base md:text-base lg:text-lg xl:text-lg">
+                    {intro}
+                </div>
             </div>
-            <div className='remarks-container text-lg md:text-lg lg:text-xl xl:text-xl'>{remarks}</div>
-            <div className="intro-container sm:px-16 md:px-32 lg:px-32 xl:px-32 text-base md:text-base lg:text-lg xl:text-lg">
-                {intro}
-            </div>
-        </div>
-        {/* <Gallery/> */}
-        <Gallery folder={slug} images={imageFilenames}  />
+            {/* <Gallery/> */}
+            <div className='px-4 pb-4'><Gallery folder={slug} images={imageFilenames}  /></div>
 
         </main>
     

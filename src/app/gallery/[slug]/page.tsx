@@ -1,8 +1,6 @@
 import React from 'react'
-import Footer from "../../_components/footer";
-import Navigation from "../../_components/footer";
-import Gallery from "../../_components/Gallery";
-import { getImages } from '../../_components/getImage';
+import Gallery from "@/app/_components/Gallery";
+import { getImages } from '@/app/_components/getImage';
 import { Metadata } from 'next'
 
 import Image from 'next/image';
@@ -62,10 +60,10 @@ export default async function Page({ params }: { params: { slug: string } })  {
               break;
         default: //Tilings
             intro = "Mosaics, large/small formats, subway, textured, tile on tile. \n" +
-            "We will help you visualize and make your project come to life making plans. \n";
+            "We specialize in all tiling applications with professional quality installations for commercial or residential settings. \n";
     }
 
-    return <main className='min-h-screen'>
+    return <main className='min-h-screen px-4 pb-4'>
       <div className='flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
           <div className='flex justify-center items-center gallery-header self-center text-base md:text-lg lg:text-xl xl:text-2xl'>
                 {slug.charAt(0).toUpperCase() + slug.slice(1)}

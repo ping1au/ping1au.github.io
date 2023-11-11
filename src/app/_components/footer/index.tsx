@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="w-full h-auto bg-black sticky top-0 py-4 flex-col justify-center items-center footer-container text-xs md:text-sm lg:text-sm xl:text-sm">
+        <div className="w-full h-auto bg-black sticky top-0 px-4 py-4 flex-col justify-center items-center footer-container text-xs md:text-sm lg:text-sm xl:text-sm">
             <div className="flex w-full justify-center items-center">
                 DOLLARD-DES-ORMEAUX, PIERREFONDS, ROXBORO, BEACONSFIELD, KIRKLAND,<br/>
                 SAINT-ANNE-DE-BELLEVUE, SENNEVILLE, BAIE D’URFÉ, L’ÎLE-BIZARD, POINTE-CLAIRE, DORVAL, LACHINE,<br/>
@@ -36,8 +36,8 @@ const Footer = () => {
                 <a className="hover:bg-sky-700" href="https://maps.app.goo.gl/zCFcqMGm2FzUWfs78" target='_blank'>Roger Larin faslrs FDC Ameublement<br/>802 Saint-Robert, Saint Lazare, QC J7T 2M4</a><br/>
                 <a className="hover:bg-sky-700" href="tel:+15146061705">
                         <span className="text-lg">✆ </span>514-606-1705</a><br />
-                        <a className="hover:bg-sky-700" href="mailto:rogerlarin.fdc@gmail.com">
-                        <span className="text-lg">✉ </span>rogerlarin.fdc@gmail.com</a>
+                        <a className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
+                        <span className="text-lg">✉ </span>info@fdcrenovations.com</a>
             </div>
         </div>
     )

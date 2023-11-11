@@ -41,7 +41,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
         {beforeGalleryArray.map((x, index) => {
                 return (
                   <div className="container grid grid-cols-7 m-auto w-full" key={'bigDiv'+index}>
-                        <div className="col-span-3 gallery-container w-full flex justify-center items-center py-4" key={'divbefore'+index}>
+                        <div className="col-span-3 gallery-container w-full flex justify-center py-4" key={'divbefore'+index}>
                             <Image
                                 className='ba-image'
                                 width={400}
@@ -49,7 +49,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
                                 // layout="fill"
                                 // objectFit="cover"
                                 alt={'alt'}
-                                src={x.imageUrl}
+                                src={`images/before/${index+1}.webp`}
                                 key={'before' + index+1}
                                 style={{ width: '100%' }}
                                 // onClick={onClick ? onClick : undefined}
@@ -61,7 +61,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
 </svg>
 
                           </div>
-                          <div className="col-span-3 gallery-container w-full flex justify-center items-center  py-4" key={'divafter'+index}>
+                          <div className="col-span-3 gallery-container w-full flex justify-center py-4" key={'divafter'+index}>
                             <Image
                                 className='ba-image'
                                 width={400}

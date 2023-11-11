@@ -55,6 +55,31 @@ export default function TestimonialSliderPage() {
       quote: "It was a wonderful experience working with FDC Furnishings. Roger was very knowledgeable and helpful throughout the whole process. His team was reliable and got the work done in a timely manner. Most importantly, I am so pleased with the final result and the attention to detail. I can’t wait to have Roger and his team back for my next project!",
       name: 'Debora',
       role: 'Lacine'
+    },
+    {
+      quote: "We hired Roger and his crew to renovate all 3 floors of our home to prepare it for selling and they did a wonderful job. The basement, bathrooms and wood floors look especially nice. We would highly recommend them.",
+      name: 'Murray and Dorothy',
+      role: 'Pierrefond'
+    },
+    {
+      quote: "FDC redid our main bathroom, basement lighting and repaired some damaged walls, we were quite happy with their work and will call on them for our next projects.",
+      name: 'Julie',
+      role: 'Pierrefond'
+    },
+    {
+      quote: "These guys did a good job on my main bathroom, would recommend to anyone looking for renos.",
+      name: 'Dave',
+      role: 'St-Lazare'
+    },
+    {
+      quote: "Our stairs & railings needed replacement and FDC did a nice job at great price. Would refer them to anyone looking to renovate.",
+      name: 'Chris',
+      role: 'Vaudreuil'
+    },
+    {
+      quote: "Roger redid the tiles in our main bathroom and installed a new patio door. We were very pleased with the result and appreciated how clean the area was left.",
+      name: 'Tom and Susan',
+      role: 'Pierrefond'
     }
   ]
 

@@ -8,20 +8,20 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="flex-col home-container mx-auto px-4">
+      <div className="flex-col home-container mx-auto">
         <div className="grid banner-container place-items-center">
                   <Image
                         src="/images/banner.webp"
                         width={1500}
                         height={400}
                         alt="FDC banner"
-                        
-                        style={{ width: '45%' }} //The point is right there!
+                        className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                        // style={{ width: '45%' }} //The point is right there!
                         //OR className='w-100 h-100'
                     />
         </div>
         <div className="flex-col">
-          <div className="service-container">
+          <div className="service-container py-4">
           Select the type of service you need!
           </div>
           {/* <div className="button-container grid grid-cols-3 divide-x-4 divide-amber-500 place-items-center pb-10"> */}
@@ -31,17 +31,45 @@ export default function Home() {
                     <img className="object-contain w-40" src="/images/service_fix.webp"></img>
                 </button> */}
                 <Link href="/services/fdc_fix">
-                  <img className="object-contain w-40 self-center" src="/images/service_fix.webp"></img>
+                  {/* <img className="object-contain w-40 self-center" src="/images/service_fix.webp"></img> */}
+                  <Image
+                        src="/images/service_fix.webp"
+                        width={100}
+                        height={100}
+                        alt="FDC Fix-it"
+                        sizes="100vw"
+                        className='xs:w-1/3 sm:w-1/3 md:w-1/3 lg:w-40 xl:w-40 2xl:w-40 m-auto'
+                        // style={{ width: '45%' }} //The point is right there!
+                        //OR className='w-100 h-100'
+                    />
                 </Link>
             </div>
             <div className=''>
                 <Link href="/services/fdc_renovations">
-                  <img className="object-contain w-40 self-center" src="/images/service_renovations.webp"></img>
+                  <Image
+                          src="/images/service_renovations.webp"
+                          width={100}
+                          height={100}
+                          alt="FDC Renovations"
+                          sizes="100vw"
+                          className='xs:w-1/3 sm:w-1/3 md:w-1/3 lg:w-40 xl:w-40 2xl:w-40 m-auto'
+                          // style={{ width: '45%' }} //The point is right there!
+                          //OR className='w-100 h-100'
+                      />
                 </Link>
             </div>
             <div className=''>
                 <Link href="/services/fdc_design">
-                  <img className="object-contain w-40" src="/images/service_design.webp"></img>
+                  <Image
+                          src="/images/service_design.webp"
+                          width={100}
+                          height={100}
+                          alt="FDC Design"
+                          sizes="100vw"
+                          className='sm:w-1/3 md:w-1/3 lg:w-40 xl:w-40 2xl:w-40 m-auto'
+                          // style={{ width: '45%' }} //The point is right there!
+                          //OR className='w-100 h-100'
+                      />
                 </Link>
             </div>
           </div>

@@ -28,8 +28,12 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
   const galleryArray: { imageUrl: string; title: string }[] = [];
 
   images?.forEach((value, index) => {
-    const url =  "https://ping1au.github.io/images/" + folder +"/"+value;
-    const galleryObj = { imageUrl: url, title: (index + 1).toString() };
+    const url =  "../../images/" + folder +"/"+value;
+    // to cgive dynamic link
+    if (folder != "fdc_fix") {
+        value = "";
+    }
+    const galleryObj = { imageUrl: url, title: value.slice(0,-5) };
     galleryArray.push(galleryObj);
   });
 
@@ -78,18 +82,18 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
   return (
     <div className="my-1 w-full gallery-container">
       <div className=" ">
+        {/* <div className="flex flex-col md:grid md:grid-cols-5 h-full gap-1 flex-wrap mx-2 md:mx-0"> */}
         <div className="flex flex-col md:grid md:grid-cols-5 h-full gap-1 flex-wrap mx-2 md:mx-0">
           {galleryArray.map((x, index) => {
             return (
-              <div key={index} className="gallery-container md:h-[50vw] h-screen relative">
+              <div key={index} className="md:h-[15vw] lg:h-[15vw] xl:h-[15vw] 2xl:h-[15vw] h-screen relative"> {/*originally h-[50vw]*/}
                 <div className="group h-full">
-                  <div
-                    className="bg-cover bg-center h-full w-full bg-no-repeat"
-                    style={{ backgroundImage: `url("${x.imageUrl}")` }}
-                  >
-                    {/* <div className="text-3xl text-white absolute bottom-0 left-2 z-10">
-                      <div>{x.title}</div>
-                    </div> */}
+                  <div className="sm:bg-cover md:bg-cover lg:bg-contain xl:bg-contain 2xl:bg-contain bg-center h-full w-full bg-no-repeat"
+                    style={{ backgroundImage: `url("${x.imageUrl}")` }}>
+                  </div>
+                  {/* <div className="bg-white text-xl text-black absolute bottom-0 left-2 z-10"> */}
+                  <div className="bg-white w-full text-xl text-black absolute z-10 bottom-0 flex justify-center items-center">
+                        <div><span className = 'text-center'>{x.title}</span></div>
                   </div>
                   <div
                     className="bg-black opacity-0 group-hover:opacity-75 absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out"

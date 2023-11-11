@@ -26,11 +26,17 @@ div.footer-logo-container {
     background-attachment: fixed; 
 }
 
-div.title-container, .service-container {
+div.banner-container, div.contact-page-container {
+  background-image: url("/images/bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed; 
+}
+
+.title-container, .service-container {
   font-family: 'Eras Bold ITC';
   text-align: center;
-  margin-top: 3em;
-  margin-bottom: 2em;
+  /* margin-top: 3em;
+  margin-bottom: 2em; */
 }
 
 div.service-logo-container, .testimonial-container {
@@ -57,7 +63,8 @@ div.remarks-container {
   font-family: 'Myriad Pro';
   text-align: center;
   text-decoration: underline;
-  color: #F15A29;
+  color: #FF0000;
+  padding-top: 1em;
 }
 
 div.ba-header {
