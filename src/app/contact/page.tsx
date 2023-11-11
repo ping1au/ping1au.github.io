@@ -17,9 +17,9 @@ const Contact = () => {
               <a className="hover:bg-sky-100" href="https://maps.app.goo.gl/zCFcqMGm2FzUWfs78" target='_blank'>
                 Roger Larin faslrs FDC Ameublement<br/>802 Saint-Robert, Saint Lazare, QC J7T 2M4</a>
               </p>
-              <div className="relative mx-auto w-96 h-96">
+              <div className="w-2/3">
               
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.141334933102!2d-74.1664035!3d45.3863197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc94aed96b76787%3A0x64df9a1d37f3bb64!2s802%20Mnt%20Saint-Robert%2C%20Saint-Lazare%2C%20QC%20J7T%202M4%2C%20Canada!5e0!3m2!1sen!2shk!4v1699696294887!5m2!1sen!2shk" width="600" height="450" ></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.141334933102!2d-74.1664035!3d45.3863197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc94aed96b76787%3A0x64df9a1d37f3bb64!2s802%20Mnt%20Saint-Robert%2C%20Saint-Lazare%2C%20QC%20J7T%202M4%2C%20Canada!5e0!3m2!1sen!2shk!4v1699696294887!5m2!1sen!2shk"></iframe>
               </div>
               <p><span className="field-header">Phone:</span></p><p><a className="hover:bg-sky-100" href="tel:+15146061705">
                         <span className="text-lg">✆ </span>514-606-1705</a></p>
