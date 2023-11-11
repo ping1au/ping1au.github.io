@@ -95,7 +95,7 @@ const Sidebar = ({
   return (
     <>
       <div
-        className="sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid pt-[120px] left-0 z-50"
+        className="bg-opacity-90 sidebar-container fixed w-full h-full overflow-auto justify-center bg-white grid pt-[120px] left-0 z-50"
         style={{
           opacity: `${isOpen ? "1" : "0"}`,
           top: ` ${isOpen ? "0" : "-100%"}`,
