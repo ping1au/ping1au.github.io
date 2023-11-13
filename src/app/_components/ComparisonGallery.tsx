@@ -41,7 +41,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
         {beforeGalleryArray.map((x, index) => {
                 return (
                   <div className="container grid grid-cols-7 m-auto w-full" key={'bigDiv'+index}>
-                        <div className="col-span-3 gallery-container w-full flex justify-center py-4" key={'divbefore'+index}>
+                        <div className="col-span-3 gallery-container w-full flex items-center justify-center py-4" key={'divbefore'+index}>
                             <Image
                                 className='ba-image'
                                 width={400}
@@ -61,7 +61,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
 </svg>
 
                           </div>
-                          <div className="col-span-3 gallery-container w-full flex justify-center py-4" key={'divafter'+index}>
+                          <div className="col-span-3 gallery-container w-full flex items-center justify-center py-4" key={'divafter'+index}>
                             <Image
                                 className='ba-image'
                                 width={400}
