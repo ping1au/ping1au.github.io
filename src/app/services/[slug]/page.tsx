@@ -1,14 +1,8 @@
 import React from 'react'
-import Footer from "../../_components/footer";
-import Navigation from "../../_components/footer";
 import Gallery from "../../_components/Gallery";
 import { getImages } from '../../_components/getImage';
 import { Metadata } from 'next'
-
-
 import Image from 'next/image';
-
-const galleryPages = ['fdc_fix', 'fdc_renovations', 'fdc_design'];
 
 type Props = {
     params: { id: string }
@@ -17,15 +11,6 @@ type Props = {
 export async function generateMetadata(
     { params }: Props
   ): Promise<Metadata> {
-    // read route params
-    const id = params.id
-   
-    // // fetch data
-    // const product = await fetch(`https://.../${id}`).then((res) => res.json())
-   
-    // // optionally access and extend (rather than replace) parent metadata
-    // const previousImages = (await parent).openGraph?.images || []
-   
     return {
         title: 'FDC Services',
         description: 'We offer Fix-it, Renovations and Design services.',
@@ -62,7 +47,13 @@ export default async function Page({ params }: { params: { slug: string } })  {
 
     return <main className='min-h-screen'>
             <div className='bg-gray-200 flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
-                <div className='w-full py-16 service-logo-container flex justify-center'><img className="object-contain w-40 self-center" src={logoPath}></img>
+                <div className='w-full py-16 service-logo-container flex justify-center'>
+                    <Image src={logoPath}
+                        width={100}
+                        height={100}
+                        alt={slug}
+                        sizes="100vw"
+                        className='xs:w-1/3 sm:w-1/3 md:w-1/3 lg:w-40 xl:w-40 2xl:w-40 m-auto'/>
                 </div>
                 <div className='remarks-container text-lg md:text-lg lg:text-xl xl:text-xl'>{remarks}</div>
                 <div className="intro-container sm:px-16 md:px-32 lg:px-32 xl:px-32 text-base md:text-base lg:text-lg xl:text-lg">
@@ -70,31 +61,10 @@ export default async function Page({ params }: { params: { slug: string } })  {
                 </div>
             </div>
             {/* <Gallery/> */}
-            <div className='px-4 pb-4'><Gallery folder={slug} images={imageFilenames}  /></div>
-
+            <div className='px-4 pb-4 common-page-container'><Gallery folder={slug} images={imageFilenames}  /></div>
         </main>
-    
-    // <main className="flex flex-col min-h-screen bg-zinc-300">
-        
-    //     <Gallery />
-    // </main>
 }
 
 export async function generateStaticParams() {
     return [{slug:'fdc_fix'}, {slug:'fdc_renovations'}, {slug:'fdc_design'}];
-    // return galleryPages.map((page) => ({ page }))
-    // return [{ slug: 'basements' }, 
-    //         { slug: 'bathrooms' }, 
-    //         { slug: 'fireplaces' }, 
-    //         { slug: 'kitchens' }, 
-    //         { slug: 'outdoor' },
-    //         { slug: 'stairs' },  
-    //         { slug: 'tilings' }]
-  }
-   
-  // Three versions of this page will be statically generated
-  // using the `params` returned by `generateStaticParams`
-  // - /gallery/basements
-  // - /gallery/bathrooms
-  // - /gallery/fireplaces
-
+}

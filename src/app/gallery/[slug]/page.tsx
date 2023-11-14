@@ -63,25 +63,17 @@ export default async function Page({ params }: { params: { slug: string } })  {
             "We specialize in all tiling applications with professional quality installations for commercial or residential settings. \n";
     }
 
-    return <main className='min-h-screen px-4 pb-4'>
-      <div className='flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
-          <div className='flex justify-center items-center gallery-header self-center text-base md:text-lg lg:text-xl xl:text-2xl'>
-                {slug.charAt(0).toUpperCase() + slug.slice(1)}
-            </div>
-            <div className="intro-container sm:px-16 md:px-32 lg:px-32 xl:px-32 text-base md:text-base lg:text-lg xl:text-lg">
-                {intro}
-            </div>
-      </div>
-        
-        {/* <Gallery/> */}
-        <Gallery folder={slug} images={imageFilenames}  />
-
-        </main>
-    
-    // <main className="flex flex-col min-h-screen bg-zinc-300">
-        
-    //     <Gallery />
-    // </main>
+    return <main className='min-h-screen px-4 pb-4 common-page-container'>
+                <div className='flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
+                    <div className='flex justify-center items-center gallery-header self-center text-base md:text-lg lg:text-xl xl:text-2xl'>
+                            {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                        </div>
+                        <div className="intro-container sm:px-16 md:px-32 lg:px-32 xl:px-32 text-base md:text-base lg:text-lg xl:text-lg">
+                            {intro}
+                        </div>
+                </div>
+                <Gallery folder={slug} images={imageFilenames}  />
+            </main>
 }
 
 export async function generateStaticParams() {
@@ -92,19 +84,4 @@ export async function generateStaticParams() {
     {slug:'outdoor'},
     {slug:'stairs'}, 
     {slug:'tilings'}];
-    // return galleryPages.map((page) => ({ page }))
-    // return [{ slug: 'basements' }, 
-    //         { slug: 'bathrooms' }, 
-    //         { slug: 'fireplaces' }, 
-    //         { slug: 'kitchens' }, 
-    //         { slug: 'outdoor' },
-    //         { slug: 'stairs' },  
-    //         { slug: 'tilings' }]
   }
-   
-  // Three versions of this page will be statically generated
-  // using the `params` returned by `generateStaticParams`
-  // - /gallery/basements
-  // - /gallery/bathrooms
-  // - /gallery/fireplaces
-

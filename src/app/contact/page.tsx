@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Contact FDC Renovations",
-  description: "Contact us for a free estimate and more information!",
+  description: "Contact FDC for a free estimate and more information!",
 }
 
 import React from "react";
@@ -11,7 +11,7 @@ const Contact = () => {
           <div className="title-container mx-auto px-4 py-8 text-base md:text-lg lg:text-xl xl:text-2xl">
             Contact
           </div>
-          <div className="mx-auto px-16 pb-20 text-base md:text-lg lg:text-lg xl:text-lg">
+          <div className="mx-auto px-16 pb-16 text-base md:text-lg lg:text-lg xl:text-lg">
               <p><span className="field-header">Address:</span></p>
               <p>
               <a className="hover:bg-sky-100" href="https://maps.app.goo.gl/zCFcqMGm2FzUWfs78" target='_blank'>

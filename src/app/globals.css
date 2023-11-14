@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+}
+
 div.slogan, div.contact {
   /* text-align: right; */
   color: white;
@@ -20,16 +24,15 @@ div.footer-logo-container {
   margin-bottom: 1em;
 }
 
-.page-container {
-  background-image: url("/images/bg.png");
-    background-repeat: repeat;
-    background-attachment: fixed; 
+.common-page-container {
+    background-color: white;
 }
 
-div.banner-container, div.contact-page-container {
-  background-image: url("/images/bg.png");
+div.banner-container, div.contact-page-container, div.service-logo-container, .testimonial-container {
+    background-image: url("/images/bg.png");
     background-repeat: repeat;
     background-attachment: fixed; 
+    background-color: white;
 }
 
 .title-container, .service-container {
@@ -37,12 +40,6 @@ div.banner-container, div.contact-page-container {
   text-align: center;
   /* margin-top: 3em;
   margin-bottom: 2em; */
-}
-
-div.service-logo-container, .testimonial-container {
-  background-image: url("/images/bg.png");
-    background-repeat: repeat;
-    background-attachment: fixed; 
 }
 
 div.comment-container {

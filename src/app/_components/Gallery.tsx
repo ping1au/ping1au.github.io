@@ -80,7 +80,7 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
   }));
 
   return (
-    <div className="my-1 w-full gallery-container">
+    <div className="py-1 w-full gallery-container">
       <div className=" ">
         {/* <div className="flex flex-col md:grid md:grid-cols-5 h-full gap-1 flex-wrap mx-2 md:mx-0"> */}
         <div className="flex flex-col md:grid md:grid-cols-5 h-full gap-1 flex-wrap mx-2 md:mx-0">
@@ -88,7 +88,7 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
             return (
               <div key={index} className="md:h-[15vw] lg:h-[15vw] xl:h-[15vw] 2xl:h-[15vw] h-screen relative"> {/*originally h-[50vw]*/}
                 <div className="group h-full">
-                  <div className="sm:bg-cover md:bg-cover lg:bg-contain xl:bg-contain 2xl:bg-contain bg-center h-full w-full bg-no-repeat"
+                  <div className="sm:bg-cover md:bg-cover lg:bg-contain xl:bg-contain 2xl:bg-contain bg-contain bg-cover h-full w-full bg-no-repeat"
                     style={{ backgroundImage: `url("${x.imageUrl}")` }}>
                   </div>
                   {/* <div className="bg-white text-xl text-black absolute bottom-0 left-2 z-10"> */}

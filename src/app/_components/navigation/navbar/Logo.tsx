@@ -39,13 +39,11 @@ const Logo = () => {
     {/* <Link href="/" style={{ display: showButton ? "none" : "block" }}> */}
     <Link href="/" style={{display:"block"}}>
         <Image
-          src="/images/fdcLogo.png"
+          // src="/images/fdcLogo.png"
+          src={width < 1024 ? "/images/logo.png" : "/images/fdcLogo.png"}
           alt="Logo"
           width={width < 1024 ? "150" : "250"}
           height={width < 1024 ? "45" : "74"}
-          // layout="fill"
-          // objectFit="cover"
-          
           className="relative"
         />
       </Link>

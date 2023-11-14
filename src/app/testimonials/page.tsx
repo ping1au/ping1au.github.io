@@ -86,16 +86,14 @@ export default function TestimonialSliderPage() {
   return (
     <>
       <main className="min-h-screen flex flex-col justify-center testimonial-container">
-      <div className="pt-8 mx-auto px-4 text-base md:text-lg lg:text-xl xl:text-2xl">
-              Comments from our customers
+          <div className="pt-8 mx-auto px-4 text-base md:text-lg lg:text-xl xl:text-2xl">
+                  Comments from our customers
           </div>
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="flex justify-center" style={{whiteSpace: "pre-wrap"}}>
-            
-            <TestimonialSlider testimonials={testimonials} />
-
+          <div className="max-w-6xl mx-auto px-4 md:px-6">
+                <div className="flex justify-center" style={{whiteSpace: "pre-wrap"}}>
+                  <TestimonialSlider testimonials={testimonials} />
+                </div>
           </div>
-        </div>
       </main>
     </>
   )

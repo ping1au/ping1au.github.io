@@ -8,7 +8,6 @@ import { promises as fs } from 'fs'
 // import { baGallery } from "../gallery/ba-Gallery";
 import path from 'path'
 import Image, { ImageProps } from 'next/image';
-import BaGallery from "../_components/BaGallery";
 import ComparisonGallery from "../_components/ComparisonGallery";
 import { getImages } from '../_components/getImage';
 
@@ -21,7 +20,7 @@ export default async function Page() {
   const afterImageFilenames =  await getImages("after");
 
   return (
-    <>
+    <main className="common-page-container">
       <div className="container flex flex-col justify-center items-center w-full m-auto">
         {/* 1st row */}
           <div className="container grid grid-cols-7 m-auto w-full">
@@ -65,7 +64,7 @@ export default async function Page() {
               </div>
             </div>
         </div> */}
-     </>
+     </main>
 
   )
 }
