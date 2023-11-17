@@ -119,11 +119,12 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                       <div className="grid grid-cols-2 divide-x-2 gap-3">
                           <div className=" flex slogan self-center justify-end">CALL US FOR A FREE ESTIMATE</div>
                           <div className="contact flex flex-col px-2">
-                              <div><Link className="hover:bg-sky-700" href="tel:+15146061705"><span className="text-lg">✆ </span>514-606-1705
-                                </Link></div>
+                              <div><Link className="hover:bg-sky-700" href="tel:+15146061705">
+                                      <span className="">&#9742; </span>514-606-1705
+                                    </Link></div>
                               <div><Link className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
-                              <span className="text-lg">✉ </span>info@fdcrenovations.com
-                                </Link></div>
+                                      <span className="text-lg">&#9993; </span>info@fdcrenovations.com
+                                    </Link></div>
                           </div>
                       </div>
                 </div>
