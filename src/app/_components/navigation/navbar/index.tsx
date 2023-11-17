@@ -123,7 +123,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                                       <span className="">&#9742; </span>514-606-1705
                                     </Link></div>
                               <div><Link className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
-                                      <span className="text-lg">&#9993; </span>info@fdcrenovations.com
+                                      <span className="">&#9993; </span>info@fdcrenovations.com
                                     </Link></div>
                           </div>
                       </div>
