@@ -71,12 +71,13 @@ const menuItems: MenuItem[] = [
     key:5,
     title: "CONTACT",
     route: "/contact",
-  },
-  {
-    key:6,
-    title: "FR",
-    route: "#",
-  },
+  }
+  // ,
+  // {
+  //   key:6,
+  //   title: "FR",
+  //   route: "#",
+  // },
 ];
 
 
@@ -85,7 +86,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
     <>
       <div className="w-full h-auto bg-black sticky top-0 z-40">
         {/* <div className="container mx-auto px-4 h-full"> */}
-        <div className="container pl-1 pr-1 h-full">
+        <div className="header-container pl-1 pr-1 h-full">
           <div className="flex justify-between items-center h-full">
             <div className="w-1/5 flex justify-center">
               <Logo />
@@ -103,18 +104,28 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
             
             <div className="flex-col w-4/5">
                 <div className="top-container flex justify-end text-xs md:text-sm lg:text-sm xl:text-sm">
-                    <div className="self-center slogan divide-x-2 divide-blue-300">
-                      <span className="slogan px-4 py-1">CALL US FOR A FREE ESTIMATE</span>
-                      <span className="px-4 py-1"></span>
-                    </div>
-                    <div className="contact">
-                      <span className="">
-                        <a className="hover:bg-sky-700" href="tel:+15146061705">
-                        <span className="text-lg">✆ </span>514-606-1705</a><br />
-                        <a className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
-                        <span className="text-lg">✉ </span>info@fdcrenovations.com</a>
-                      </span>
-                    </div>
+                      {/* <div className="self-center slogan divide-x-2 divide-blue-300">
+                        <span className="slogan px-4 py-1">CALL US FOR A FREE ESTIMATE</span>
+                        <span className="px-4 py-1"></span>
+                      </div>
+                      <div className="contact">
+                        <span className="">
+                          <a className="hover:bg-sky-700" href="tel:+15146061705">
+                          <span className="text-lg">✆ </span>514-606-1705</a><br />
+                          <a className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
+                          <span className="text-lg">✉ </span>info@fdcrenovations.com</a>
+                        </span>
+                      </div> */}
+                      <div className="grid grid-cols-2 divide-x-2 gap-3">
+                          <div className=" flex slogan self-center justify-end">CALL US FOR A FREE ESTIMATE</div>
+                          <div className="contact flex flex-col px-2">
+                              <div><Link href="tel:+15146061705">
+                                </Link><span className="text-lg">✆ </span>514-606-1705</div>
+                              <div><Link href="mailto:info@fdcrenovations.com">
+                              <span className="text-lg">✉ </span>info@fdcrenovations.com
+                                </Link></div>
+                          </div>
+                      </div>
                 </div>
                     
                 <div className="navbar-container flex justify-center items-center flex gap-8">
