@@ -77,12 +77,13 @@ const menuItems: MenuItem[] = [
     key:5,
     title: "CONTACT",
     route: "/contact",
-  },
-  {
-    key:6,
-    title: "FR",
-    route: "#",
-  },
+  }
+  // ,
+  // {
+  //   key:6,
+  //   title: "FR",
+  //   route: "#",
+  // },
 ];
 
 const Sidebar = ({
