@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /ftp/
+Disallow: /email/
+
+Sitemap: http://fdcrenovations.com/sitemap.xml
