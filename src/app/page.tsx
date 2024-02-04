@@ -9,14 +9,17 @@ export default function Home() {
   return (
     <>
       <div className="flex-col home-container mx-auto bg-white">
-        <div className="grid banner-container place-items-center">
-                  <Image
+        <div className="grid grid-cols-3 banner-container place-items-center">
+                  
+                  <div></div>
+                  <div><Image
                         src="/images/banner.webp"
                         width={1500}
                         height={400}
                         alt="FDC banner"
                         className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
-                    />
+                    /></div>
+                  <div></div>
         </div>
         <div className="flex-col">
           <div className="service-container py-4">
