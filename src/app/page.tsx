@@ -9,17 +9,31 @@ export default function Home() {
   return (
     <>
       <div className="flex-col home-container mx-auto bg-white">
-        <div className="grid banner-container place-items-center">
-                  
-                 
-                  <Image
-                        src="/images/banner.webp"
-                        width={1500}
+        <div className="grid grid-cols-4 banner-container place-items-center">
+        <div className='px-10'><Image src="/images/left_tag.png"
+                        //width={400}
+                        width={1000}
+                        height={400}
+                        alt="right tag"
+                        //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                        className='w-full'
+                        /></div>
+              <div className="col-span-2"><Image src="/images/banner.webp"
+                        //width={400}
+                        width={1000}
                         height={400}
                         alt="FDC banner"
-                        className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
-                    />
-                  
+                        //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                        className='w-full'
+                        /></div>
+              <div className='px-10'><Image src="/images/right_tag.png"
+                        //width={400}
+                        width={1000}
+                        height={400}
+                        alt="right tag"
+                        //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                        className='w-full'
+                        /></div>
         </div>
         <div className="flex-col">
           <div className="service-container py-4">
@@ -46,7 +60,7 @@ export default function Home() {
             <div className=''>
                 <Link href="/services/fdc_renovations" target="_blank">
                   <Image
-                          src="/images/service_renovations.webp"
+                          src="/images/service_renovations.png"
                           width={100}
                           height={100}
                           alt="FDC Renovations"

@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { slug: string } })  {
             "Our fix-it division is tailored to complete any misc project at very reasonable costs.";
             break;
         case 'fdc_renovations':
-            logoPath = "/images/service_renovations.webp";
+            logoPath = "/images/service_renovations.png";
             intro = "FDC has a complete experienced team to deliver full turnkey quality renovations on time and on budget. \n" +
             "Whether it's a Bathroom, Kitchen, Basement or any other project we will guide you through the process.\n";
             break;
