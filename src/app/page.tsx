@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <div className="flex-col home-container mx-auto bg-white">
         <div className="grid grid-cols-4 banner-container place-items-center">
-        <div className='px-10'><Image src="/images/left_tag.png"
+        <div className='md:px-1 xl:px-10 2xl:px-10 px-0'><Image src="/images/left_tag.png"
                         //width={400}
                         width={1000}
                         height={400}
@@ -26,7 +26,7 @@ export default function Home() {
                         //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
                         className='w-full'
                         /></div>
-              <div className='px-10'><Image src="/images/right_tag.png"
+              <div className='md:px-1 xl:px-10 2xl:px-10 px-0'><Image src="/images/right_tag.png"
                         //width={400}
                         width={1000}
                         height={400}
