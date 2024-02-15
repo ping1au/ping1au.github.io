@@ -49,7 +49,7 @@ export default async function BeforeAfterPage() {
                     <div className="container grid grid-cols-7 m-auto w-full">
                         {/* before */}
                         <div className="ba-header col-span-3 w-full flex items-center justify-center">
-                                {locale=="EN" ? "BEFORE" : "AVANT"}
+                                {locale=="en" ? "BEFORE" : "AVANT"}
                         </div>
                         {/* arrow */}
                         <div className="gallery-container w-full flex items-center justify-center">
@@ -57,7 +57,7 @@ export default async function BeforeAfterPage() {
                         </div>
                         {/* after */}
                         <div className="ba-header col-span-3 w-full flex items-center justify-center">
-                                {locale=="EN" ? "AFTER" : "APRÈS"}
+                                {locale=="en" ? "AFTER" : "APRÈS"}
                         </div>
                     </div>
                     
