@@ -18,7 +18,7 @@ export async function generateMetadata(
     }
   }
 
-export const getTranslatedtext = async () =>  {
+async function getTranslatedtext () {
     try {
         const t = await getTranslations('ServicePage');
         return (
@@ -32,6 +32,7 @@ export const getTranslatedtext = async () =>  {
             });
     } catch (error: any) {
         console.log(error);
+        return error;
     }
 }
 
