@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
-
-import { MenuItem } from './index';
+import { MenuItem } from '../getMenuItems';
+import {createSharedPathnamesNavigation} from 'next-intl/navigation'
 
 interface Props {
     item: MenuItem;
@@ -17,7 +17,8 @@ export default function Dropdown(props: Props) {
     }
 
     const transClass = isOpen ? "flex": "hidden";
-
+    const locales = ['en', 'fr'] as const;
+    const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
     return (
         <>
             <div className="relative hidden md:flex gap-x-6 menu-list z-50">

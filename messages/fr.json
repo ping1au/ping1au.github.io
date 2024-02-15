@@ -1,0 +1,120 @@
+{
+    "Header": {
+        "call": "Estimation gratuite",
+        "home": "Acceuil",
+        "testimonials": "Témoignages",
+        "gallery": "Réalisations",
+        "basements": "Sous-sols",
+        "bathrooms": "Salles de Bains",
+        "fireplaces": "Foyers",
+        "kitchens": "Cuisines",
+        "outdoor": "Extérieur",
+        "stairs": "Escaliers",
+        "tilings": "Carrelages",
+        "before_and_after": "Avant et après",
+        "contact": "Contact"
+    },
+    "Home": {
+        "metadata": {
+            "title": "FDC Renovations",
+            "description": "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession."
+        },
+        "left-pic-src": "/images/left_tag_fr.png",
+        "banner-src": "/images/banner_fr.webp",
+        "right-pic-src": "/images/right_tag_fr.png",
+        "intro": "Sélectionnez le type de service vous avez besoin.",
+        "serv1": "/services/fdc_fix",
+        "serv1-src": "/images/service_fix_fr.png",
+        "serv2": "/services/fdc_renovations",
+        "serv2-src": "/images/service_renovations_fr.png",
+        "serv3": "/services/fdc_design",
+        "serv3-src": "/images/service_design_fr.png"
+    },
+    "ServicePage": {
+        "metadata": {
+            "title": "FDC Renovations",
+            "description": "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession."
+        },
+        "serv1-intro": "Avez-vous une longue liste de petits projets de maison inachevés ou peut-être des réparations urgentes!\nNotre division de réparation est conçue pour réaliser les projets divers à des coûts très raisonnables.",
+        "serv2-intro": "FDC dispose d’une équipe complète et expérimentée pour livrer des rénovations de qualité clé en main, dans les délais et limites du budget.\nQu'il s'agisse d'une salle de bain, d'une cuisine, d'un sous-sol ou de tout autre projet, nous vous guiderons tout au long du processus.",
+        "serv3-intro": "ILes créateurs d'intérieur assistent et guident les clients tout au long de la phase de conception.\nNous vous aiderons à visualiser et à donner vie au projet en élaborant des plans\nunique à leur espace et à leurs goûts.",
+        "serv1-src": "/images/service_fix_fr.png",
+        "serv2-src": "/images/service_renovations_fr.png",
+        "serv3-src": "/images/service_design_fr.png"
+    },
+    "TestimonialSliderPage": {
+        "intro": "Commentaires de nos clients"
+    },
+    "GalleryPageOld":[
+        {
+            "title": "Sous-sols",
+            "description": "Sous-sols non fini, réparations après-sinistre ou d'inondations, ajout de pièce ou de salle de bain, nouveau revêtement de sol."
+        },
+        {
+            "title": "Salles de bains",
+            "description": "Qu’il s’agisse d’une rénovation complet ou simplement d’un rafraîchissement, nous vous guiderons à chaque étape en utilisant des matériaux de qualité.\nLe résultat final est une salle de bains extraordinaire à des prix qui vous surprendront – dans le bon sens."
+        },
+        {
+            "title": "Foyers",
+            "description": "Nouvelles installations personnalisées ou conversions gaz/bois/électricité.\nNous pouvons faire de votre foyer un point central en utilisant des designs et des matériaux uniques qui attireront l'attention de tous."
+        },
+        {
+            "title": "Cuisines",
+            "description": "Concepts ouverts et extensions ou simples mises à jour. En utilisant des options d'armoires et de comptoirs en stock pour les budget serré ou des matériaux haut de gamme personnalisés,\nnous vous aiderons à compléter l'espace le plus important en ajoutant de la valeur à votre maison."
+        },
+        {
+            "title": "Extérieur",
+            "description": "Pergolas, gazebos, contours de piscine, grands espaces de terrasse à plusieurs niveaux utilisant une variété de bois ou de matériaux composites tels que TimberTech®, Trex®, Veranda®.\nNous proposons également des options d'abris 3 saisons utilisant des tissus de haute qualité tels que Sunbrella®."
+        },
+        {
+            "title": "Escaliers",
+            "description": "Menuiserie détaillée utilisant plusieurs variété de bois dur ou de matériaux stratifiés avec de nombreuses options de finitions sur les escaliers et les balustrades."
+        },
+        {
+            "title": "Carrelages",
+            "description": "Mosaïques, grands/petits formats, mosaïques, texturées, carrelage sur carrelage.\nNous sommes spécialisés dans toutes les applications avec des installations de qualité professionnelle pour les environnements commerciaux ou résidentiels."
+        }
+    ],
+    "GalleryPage": {
+        "basements": {
+            "title": "Sous-sols",
+            "description": "Sous-sols non fini, réparations après-sinistre ou d'inondations, ajout de pièce ou de salle de bain, nouveau revêtement de sol."
+        },
+        "bathrooms": {
+            "title": "Salles de bains",
+            "description": "Qu’il s’agisse d’une rénovation complet ou simplement d’un rafraîchissement, nous vous guiderons à chaque étape en utilisant des matériaux de qualité.\nLe résultat final est une salle de bains extraordinaire à des prix qui vous surprendront – dans le bon sens."
+        },
+        "fireplaces": {
+            "title": "Foyers",
+            "description": "Nouvelles installations personnalisées ou conversions gaz/bois/électricité.\nNous pouvons faire de votre foyer un point central en utilisant des designs et des matériaux uniques qui attireront l'attention de tous."
+        },
+        "kitchens": {
+            "title": "Cuisines",
+            "description": "Concepts ouverts et extensions ou simples mises à jour. En utilisant des options d'armoires et de comptoirs en stock pour les budget serré ou des matériaux haut de gamme personnalisés,\nnous vous aiderons à compléter l'espace le plus important en ajoutant de la valeur à votre maison."
+        },
+        "outdoor": {
+            "title": "Extérieur",
+            "description": "Pergolas, gazebos, contours de piscine, grands espaces de terrasse à plusieurs niveaux utilisant une variété de bois ou de matériaux composites tels que TimberTech®, Trex®, Veranda®.\nNous proposons également des options d'abris 3 saisons utilisant des tissus de haute qualité tels que Sunbrella®."
+        },
+        "stairs": {
+            "title": "Escaliers",
+            "description": "Menuiserie détaillée utilisant plusieurs variété de bois dur ou de matériaux stratifiés avec de nombreuses options de finitions sur les escaliers et les balustrades."
+        },
+        "tilings": {
+            "title": "Carrelages",
+            "description": "Mosaïques, grands/petits formats, mosaïques, texturées, carrelage sur carrelage.\nNous sommes spécialisés dans toutes les applications avec des installations de qualité professionnelle pour les environnements commerciaux ou résidentiels."
+        }
+    },
+    "BeforeAfterPage": {
+        "before": "AVANT",
+        "after": "APRÈS"
+    },
+    "ContactPage": {
+        "phone": "Tél: ",
+        "email": "Courriel: "
+    },
+    "LocaleSwitcher": {
+        "locale": "{locale, select, en {anglais} fr {français}}",
+        "language": "FR"
+    }
+}

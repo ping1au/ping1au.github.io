@@ -20,7 +20,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
   const galleryArray: { imageUrl: string; title: string }[] = [];
 
   images?.forEach((value, index) => {
-      const beforeUrl =  "/images/before/"+value;
+      const beforeUrl =  "../images/before/"+value;
       const afterUrl = "/images/after/"+value;
       const beforeGalleryObj = { imageUrl: beforeUrl, title: "before" + (index + 1).toString() };
       const afterGalleryObj = { imageUrl: afterUrl, title: "after" + (index + 1).toString() };
@@ -45,7 +45,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
                                 // layout="fill"
                                 // objectFit="cover"
                                 alt={'alt'}
-                                src={`images/before/${index+1}.webp`}
+                                src={`../images/before/${index+1}.webp`}
                                 key={'before' + index+1}
                                 style={{ width: '100%' }}
                                 // onClick={onClick ? onClick : undefined}
@@ -65,7 +65,7 @@ const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
                                 // layout="fill"
                                 // objectFit="cover"
                                 alt={'alt'}
-                                src={`images/after/${index+1}.webp`}
+                                src={`../images/after/${index+1}.webp`}
                                 key={'after'+ index+1}
                                 style={{ width: '100%' }}
                                 // onClick={onClick ? onClick : undefined}

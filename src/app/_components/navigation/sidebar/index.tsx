@@ -1,4 +1,3 @@
-import Link from "next/link";
 // import {
 //     Dropdown,
 //     DropdownTrigger,
@@ -7,84 +6,9 @@ import Link from "next/link";
 //     DropdownItem
 // } from "@nextui-org/react";
 import Dropdown from "@/app/_components/navigation/navbar/Dropdown";
-
-
-export interface MenuItem {
-  key: number;
-  title: string;
-  route?: string;
-  children?: MenuItem[];
-}
-
-const menuItems: MenuItem[] = [
-  {
-    key:1,
-    title: "HOME",
-    route: "/",
-  },
-  {
-    key:2,
-    title: "TESTIMONIALS",
-    route: "/testimonials",
-  },
-  {
-    key:3,
-    title: "GALLERY",
-    children: [
-      {
-        key:31,
-        title: "Basements",
-        route: "/gallery/basements",
-      },
-      {
-        key:32,
-        title: "Bathrooms",
-        route: "/gallery/bathrooms",
-      },
-      {
-        key:33,
-        title: "Fireplaces",
-        route: "/gallery/fireplaces",
-      },
-      {
-        key:34,
-        title: "Kitchens",
-        route: "/gallery/kitchens",
-      },
-      {
-        key:35,
-        title: "Outdoor",
-        route: "/gallery/outdoor",
-      },
-      {
-        key:36,
-        title: "Stairs",
-        route: "/gallery/stairs",
-      },
-      {
-        key:37,
-        title: "Tilings",
-        route: "/gallery/tilings",
-      },
-    ],
-  },
-  {
-    key:4,
-    title: "BEFORE & AFTER PHOTOS",
-    route: "/before_and_after",
-  },
-  {
-    key:5,
-    title: "CONTACT",
-    route: "/contact",
-  }
-  // ,
-  // {
-  //   key:6,
-  //   title: "FR",
-  //   route: "#",
-  // },
-];
+import { getMenuItems } from '../getMenuItems';
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+import LocaleSwitcher from '@/app/_components/LocaleSwitcher';
 
 const Sidebar = ({
   isOpen,
@@ -93,6 +17,10 @@ const Sidebar = ({
   isOpen: boolean;
   toggle: () => void;
 }): JSX.Element => {
+  const locales = ['en', 'fr'] as const;
+  const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
+  const menuItems = getMenuItems();
+
   return (
     <>
       <div className="bg-opacity-90 sidebar-container fixed w-full h-full overflow-auto justify-center bg-white grid pt-[120px] left-0 z-50"
@@ -129,6 +57,7 @@ const Sidebar = ({
           </ul>
         </div> */}
         <div className="menu-container">
+          <LocaleSwitcher />
           <ul className="sidebar-nav text-center leading-relaxed text-xl" key="parent">
           {menuItems.map((item, index) => {
                               return item.hasOwnProperty("children") ? (

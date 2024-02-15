@@ -29,7 +29,7 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
 
   images?.forEach((value, index) => {
     const url =  "../../images/" + folder +"/"+value;
-    // to cgive dynamic link
+    // to give dynamic link
     if (folder != "fdc_fix") {
         value = "";
     }

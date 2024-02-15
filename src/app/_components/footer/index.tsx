@@ -2,9 +2,11 @@
 import React from 'react';
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 
 const Footer = () => {
+    const locales = ['en', 'fr'] as const;
+    const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
     return (
         <div className="w-full h-auto bg-black sticky top-0 px-4 py-4 flex-col justify-center items-center footer-container text-xs md:text-sm lg:text-sm xl:text-sm">
             <div className="flex w-full justify-center items-center">

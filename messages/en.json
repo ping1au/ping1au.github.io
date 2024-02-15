@@ -1,0 +1,120 @@
+{
+    "Header": {
+        "call": "CALL US FOR A FREE ESTIMATE",
+        "home": "HOME",
+        "testimonials": "TESTIMONIALS",
+        "gallery": "GALLERY",
+        "basements": "Basements",
+        "bathrooms": "Bathrooms",
+        "fireplaces": "Fireplaces",
+        "kitchens": "Kitchens",
+        "outdoor": "Outdoor",
+        "stairs": "Stairs",
+        "tilings": "Tilings",
+        "before_and_after": "BEFORE & AFTER PHOTOS",
+        "contact": "CONTACT"
+    },
+    "Home": {
+        "metadata": {
+            "title": "FDC Renovations",
+            "description": "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession."
+        },
+        "left-pic-src": "/images/left_tag.png",
+        "banner-src": "/images/banner.webp",
+        "right-pic-src": "/images/right_tag.png",
+        "intro": "Select the type of service you need!",
+        "serv1": "/services/fdc_fix",
+        "serv1-src": "/images/service_fix.webp",
+        "serv2": "/services/fdc_renovations",
+        "serv2-src": "/images/service_renovations.png",
+        "serv3": "/services/fdc_design",
+        "serv3-src": "/images/service_design.webp"
+    },
+    "ServicePage": {
+        "metadata": {
+            "title": "FDC Renovations",
+            "description": "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession."
+        },
+        "serv1-intro": "Do you have a long list of small unfinished home projects or maybe some urgent needed repairs!\nOur fix-it division is tailored to complete any misc project at very reasonable costs.",
+        "serv2-intro": "FDC has a complete experienced team to deliver full turnkey quality renovations on time and on budget. \nWhether it's a Bathroom, Kitchen, Basement or any other project we will guide you through the process.",
+        "serv3-intro": "Interior designers assisting and guiding customers through the design phase.\nWe will help you visualize and make your project come to life making plans \nunique to their home and personnal tastes using 3D software.",
+        "serv1-src": "/images/service_fix.webp",
+        "serv2-src": "/images/service_renovations.png",
+        "serv3-src": "/images/service_design.webp"
+    },
+    "TestimonialSliderPage": {
+        "intro": "Comments from our customers"
+    },
+    "GalleryPageOld":{"menu":[
+        {
+            "title": "Basements",
+            "description": "Unfinished basements, repairs due to water damage or floods, room or bathroom addition, new flooring."
+        },
+        {
+            "title": "Bathrooms",
+            "description": "Whether it’s a complete remodel or expansion or just a refresh, we will guide you though every step using only quality materials. The end result is a beautiful bathroom at costs that will surprise you – in a good way.\n"
+        },
+        {
+            "title": "Fireplaces",
+            "description": "Complete new custom installs or simple gas/wood/electric conversions. We can make your fireplace be a focal point using unique designs & materials that will catch everyone's eye.\n"
+        },
+        {
+            "title": "Kitchens",
+            "description": "Open concepts and expansions or simple updates and refreshes.\nUsing stock cabinets & counter options for those on a tight budget or using custom high end materials, we will assist you to complete the most important space and add value to your home."
+        },
+        {
+            "title": "Outdoor",
+            "description": "Pergolas, Gazebos, small pool surrounds, large multilevel deck spaces using a variety of wood or composite materials such as TimberTech® , Trex®, Veranda®.\nWe also offer 3 season enclosure options using high quality fabrics such as Sunbrella®."
+        },
+        {
+            "title": "Stairs",
+            "description": "Detailed millwork using any variety of hardwood or laminate materials with many color stain options on stairs and railings."
+        },
+        {
+            "title": "Tilings",
+            "description": "Mosaics, large/small formats, subway, textured, tile on tile.\nWe specialize in all tiling applications with professional quality installations for commercial or residential settings."
+        }
+    ]},
+    "GalleryPage": {
+        "basements": {
+            "title": "Basements",
+            "description": "Unfinished basements, repairs due to water damage or floods, room or bathroom addition, new flooring."
+        },
+        "bathrooms": {
+            "title": "Bathrooms",
+            "description": "Whether it’s a complete remodel or expansion or just a refresh, we will guide you though every step using only quality materials. The end result is a beautiful bathroom at costs that will surprise you – in a good way.\n"
+        },
+        "fireplaces": {
+            "title": "Fireplaces",
+            "description": "Complete new custom installs or simple gas/wood/electric conversions. We can make your fireplace be a focal point using unique designs & materials that will catch everyone's eye.\n"
+        },
+        "kitchens": {
+            "title": "Kitchens",
+            "description": "Open concepts and expansions or simple updates and refreshes.\nUsing stock cabinets & counter options for those on a tight budget or using custom high end materials, we will assist you to complete the most important space and add value to your home."
+        },
+        "outdoor": {
+            "title": "Outdoor",
+            "description": "Pergolas, Gazebos, small pool surrounds, large multilevel deck spaces using a variety of wood or composite materials such as TimberTech® , Trex®, Veranda®.\nWe also offer 3 season enclosure options using high quality fabrics such as Sunbrella®."
+        },
+        "stairs": {
+            "title": "Stairs",
+            "description": "Detailed millwork using any variety of hardwood or laminate materials with many color stain options on stairs and railings."
+        },
+        "tilings": {
+            "title": "Tilings",
+            "description": "Mosaics, large/small formats, subway, textured, tile on tile.\nWe specialize in all tiling applications with professional quality installations for commercial or residential settings."
+        }
+    },
+    "BeforeAfterPage": {
+        "before": "BEFORE",
+        "after": "AFTER"
+    },
+    "ContactPage": {
+        "phone": "Phone: ",
+        "email": "Email: "
+    },
+    "LocaleSwitcher": {
+        "locale": "{locale, select, en {English} fr {French}}",
+        "language": "ENG"
+    }
+}

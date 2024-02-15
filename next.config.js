@@ -1,6 +1,12 @@
 /**
  * @type {import('next').NextConfig}
  */
+const createNextIntlPlugin = require('next-intl/plugin');
+ 
+//const withNextIntl = createNextIntlPlugin();
+//const withNextIntl = require("next-intl/plugin")("./src/i18n.ts");
+const withNextIntl = require('next-intl/plugin')();
+ 
 const nextConfig = {
   output: 'export',
   images: {
@@ -17,4 +23,5 @@ const nextConfig = {
   // distDir: 'dist',
 }
  
-module.exports = nextConfig
+//module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

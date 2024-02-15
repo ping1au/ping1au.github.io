@@ -1,87 +1,97 @@
+'use client'
 import React from "react";
-import Link from "next/link";
 import Logo from "./Logo";
 import Dropdown from "./Dropdown";
+import { getMenuItems } from '../getMenuItems';
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+import { useTranslations } from 'next-intl';
+import LocaleSwitcher from '@/app/_components/LocaleSwitcher';
+import Image from "next/image";
 
-export interface MenuItem {
-  key: number;
-  title: string;
-  route?: string;
-  children?: MenuItem[];
-}
+// export interface MenuItem {
+//   key: number;
+//   title: string;
+//   route?: string;
+//   children?: MenuItem[];
+// }
 
-const menuItems: MenuItem[] = [
-  {
-    key:1,
-    title: "HOME",
-    route: "/",
-  },
-  {
-    key:2,
-    title: "TESTIMONIALS",
-    route: "/testimonials",
-  },
-  {
-    key:3,
-    title: "GALLERY",
-    children: [
-      {
-        key:31,
-        title: "Basements",
-        route: "/gallery/basements",
-      },
-      {
-        key:32,
-        title: "Bathrooms",
-        route: "/gallery/bathrooms",
-      },
-      {
-        key:33,
-        title: "Fireplaces",
-        route: "/gallery/fireplaces",
-      },
-      {
-        key:34,
-        title: "Kitchens",
-        route: "/gallery/kitchens",
-      },
-      {
-        key:35,
-        title: "Outdoor",
-        route: "/gallery/outdoor",
-      },
-      {
-        key:36,
-        title: "Stairs",
-        route: "/gallery/stairs",
-      },
-      {
-        key:37,
-        title: "Tilings",
-        route: "/gallery/tilings",
-      },
-    ],
-  },
-  {
-    key:4,
-    title: "BEFORE & AFTER PHOTOS",
-    route: "/before_and_after",
-  },
-  {
-    key:5,
-    title: "CONTACT",
-    route: "/contact",
-  }
-  // ,
-  // {
-  //   key:6,
-  //   title: "FR",
-  //   route: "#",
-  // },
-];
+// const menuItems: MenuItem[] = [
+  
+//   {
+//     key:1,
+//     title: "HOME",
+//     route: "/",
+//   },
+//   {
+//     key:2,
+//     title: "TESTIMONIALS",
+//     route: "/testimonials",
+//   },
+//   {
+//     key:3,
+//     title: "GALLERY",
+//     children: [
+//       {
+//         key:31,
+//         title: "Basements",
+//         route: "/gallery/basements",
+//       },
+//       {
+//         key:32,
+//         title: "Bathrooms",
+//         route: "/gallery/bathrooms",
+//       },
+//       {
+//         key:33,
+//         title: "Fireplaces",
+//         route: "/gallery/fireplaces",
+//       },
+//       {
+//         key:34,
+//         title: "Kitchens",
+//         route: "/gallery/kitchens",
+//       },
+//       {
+//         key:35,
+//         title: "Outdoor",
+//         route: "/gallery/outdoor",
+//       },
+//       {
+//         key:36,
+//         title: "Stairs",
+//         route: "/gallery/stairs",
+//       },
+//       {
+//         key:37,
+//         title: "Tilings",
+//         route: "/gallery/tilings",
+//       },
+//     ],
+//   },
+//   {
+//     key:4,
+//     title: "BEFORE & AFTER PHOTOS",
+//     route: "/before_and_after",
+//   },
+//   {
+//     key:5,
+//     title: "CONTACT",
+//     route: "/contact",
+//   }
+//   // ,
+//   // {
+//   //   key:6,
+//   //   title: "FR",
+//   //   route: "#",
+//   // },
+// ];
 
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
+  const locales = ['en', 'fr'] as const;
+  const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
+  const t = useTranslations('Header');
+  const menuItems = getMenuItems();
   return (
     <>
       <div className="w-full h-auto bg-black sticky top-0 z-40">
@@ -117,7 +127,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                         </span>
                       </div> */}
                       <div className="grid grid-cols-2 divide-x-2 gap-3">
-                          <div className=" flex slogan self-center justify-end">CALL US FOR A FREE ESTIMATE</div>
+                          <div className=" flex slogan self-center justify-end">{t('call')}</div>
                           <div className="contact flex flex-col px-2">
                               <div><Link className="hover:bg-sky-700" href="tel:+15146061705">
                                       <span className="">&#9742; </span>514-606-1705
@@ -125,6 +135,28 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                               <div><Link className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
                                       <span className="">&#9993; </span>info@fdcrenovations.com
                                     </Link></div>
+                              {/* <div className="grid grid-cols-4"> */}
+                                {/* <div className="w-fit inline-block"><Link className="hover:bg-sky-700 w-fit" href="https://facebook.com/FDCFurnishings/" target="_blank">
+                                  <Image
+                                      // src="/images/fdcLogo.png"
+                                      src="/images/facebook.png"
+                                      alt="facebook"
+                                      width={24}
+                                      height={24}
+                                      className="relative"
+                                    />
+                                </Link>
+                                  <Link className="hover:bg-sky-700 w-fit" href="https://www.instagram.com/fdcrenovations" target="_blank">
+                                <Image
+                                      // src="/images/fdcLogo.png"
+                                      src="/images/instagram.png"
+                                      alt="instagram"
+                                      width={24}
+                                      height={24}
+                                      className="relative"
+                                    />
+                                </Link>@fdcrenovations</div> */}
+                              {/* </div> */}
                           </div>
                       </div>
                 </div>
@@ -140,6 +172,8 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                           </Link>
                       );
                     })}
+                    <LocaleSwitcher />
+                    
                     {/* <ul className="hidden md:flex gap-x-6 menu-list ">
                       <li>
                         <Link href="/">

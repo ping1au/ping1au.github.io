@@ -13,7 +13,7 @@ import { getImages } from '../_components/getImage';
 
 type ImageArray = string[] | undefined;
 
-export default async function Page() {
+export default async function BeforeAfterPage() {
 
   /* Reads the content of the gallery sub dir and returns an array of strings */
   const beforeImageFilenames =  await getImages("before");
