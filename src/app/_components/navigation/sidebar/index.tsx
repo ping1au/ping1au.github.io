@@ -6,7 +6,7 @@
 //     DropdownItem
 // } from "@nextui-org/react";
 import Dropdown from "@/app/_components/navigation/navbar/Dropdown";
-import { getMenuItems } from '../getMenuItems';
+import { GetMenuItems } from '../getMenuItems';
 import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 import LocaleSwitcher from '@/app/_components/LocaleSwitcher';
 
@@ -19,7 +19,7 @@ const Sidebar = ({
 }): JSX.Element => {
   const locales = ['en', 'fr'] as const;
   const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
-  const menuItems = getMenuItems();
+  const menuItems = GetMenuItems();
 
   return (
     <>

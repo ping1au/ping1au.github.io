@@ -2,7 +2,7 @@
 import React from "react";
 import Logo from "./Logo";
 import Dropdown from "./Dropdown";
-import { getMenuItems } from '../getMenuItems';
+import { GetMenuItems } from '../getMenuItems';
 import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 import { useTranslations } from 'next-intl';
 import LocaleSwitcher from '@/app/_components/LocaleSwitcher';
@@ -91,7 +91,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
   const locales = ['en', 'fr'] as const;
   const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
   const t = useTranslations('Header');
-  const menuItems = getMenuItems();
+  const menuItems = GetMenuItems();
   return (
     <>
       <div className="w-full h-auto bg-black sticky top-0 z-40">

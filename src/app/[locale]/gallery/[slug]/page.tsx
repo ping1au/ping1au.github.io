@@ -83,8 +83,8 @@ export default async function GalleryPage({ params }: { params: { slug: string }
     return (
     <>
         <main className='min-h-screen px-4 pb-4 common-page-container'>
-                {keys.map((key) =>(
-                    <div className='flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}}>
+                {keys.map((key, index) =>(
+                    <div className='flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg' style={{whiteSpace: "pre-wrap"}} key = {index}>
                         <div className='flex justify-center items-center gallery-header self-center text-base md:text-lg lg:text-xl xl:text-2xl'>
                             {/* {slug.charAt(0).toUpperCase() + slug.slice(1)} */}
                             {t(`${key}.title`)}

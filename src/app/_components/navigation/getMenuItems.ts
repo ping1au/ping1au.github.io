@@ -8,7 +8,7 @@ export interface MenuItem {
     children?: MenuItem[];
 }
 
-export const getMenuItems = (): MenuItem[] => {
+export const GetMenuItems = (): MenuItem[] => {
     const t = useTranslations('Header');
     return ([{
       key:1,
