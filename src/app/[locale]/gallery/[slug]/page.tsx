@@ -29,49 +29,49 @@ export async function generateMetadata(
     }
   }
 
-  export const getTranslatedtext = async (slug:string) =>  {
-    try {
-        const t = await getTranslations('GalleryPage');
-        let title = "";
-        let description = "";
-        const keys = [slug] as const;
-        keys.map(function(key, value) {
+//   export const getTranslatedtext = async (slug:string) =>  {
+//     try {
+//         const t = await getTranslations('GalleryPage');
+//         let title = "";
+//         let description = "";
+//         const keys = [slug] as const;
+//         keys.map(function(key, value) {
 
-        });
+//         });
         
-        //let remarks = "";
-        // switch (slug) {
-        //     case 'basements':
-        //         title = t('basements');
-        //         break;
-        //     case 'bathrooms':
+//         //let remarks = "";
+//         // switch (slug) {
+//         //     case 'basements':
+//         //         title = t('basements');
+//         //         break;
+//         //     case 'bathrooms':
                 
-        //         break;
-        //     case 'fireplaces':
+//         //         break;
+//         //     case 'fireplaces':
                 
-        //         break;
-        //     case 'kitchens':
+//         //         break;
+//         //     case 'kitchens':
                 
-        //         break;
-        //     case 'outdoor':
+//         //         break;
+//         //     case 'outdoor':
                 
-        //         break;
-        //     case 'stairs':
+//         //         break;
+//         //     case 'stairs':
                 
-        //         break;
-        //     default: //Tilings
+//         //         break;
+//         //     default: //Tilings
                 
-        //         break;
-        // }
-        return (
-            {
-                title: t(title),
-                description: t(description),
-            });
-    } catch (error: any) {
-        console.log(error);
-    }
-}
+//         //         break;
+//         // }
+//         return (
+//             {
+//                 title: t(title),
+//                 description: t(description),
+//             });
+//     } catch (error: any) {
+//         console.log(error);
+//     }
+// }
 
 export default async function GalleryPage({ params }: { params: { slug: string } })  {
     const { slug } = params;
