@@ -1,6 +1,6 @@
 import React from 'react'
-import Gallery from "../../_components/Gallery";
-import { getImages } from '../../_components/getImage';
+import Gallery from "@/app/_components/Gallery";
+import { getImages } from '@/app/_components/getImage';
 import { Metadata } from 'next'
 import Image from 'next/image';
 

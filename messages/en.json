@@ -116,5 +116,12 @@
     "LocaleSwitcher": {
         "locale": "{locale, select, en {English} fr {French}}",
         "language": "ENG"
+    },"NotFoundPage": {
+        "title": "We're sorry.",
+        "description": "The page you requested isn't available.\n\nCan't find what you're looking for? Start from our homepage."
+    },
+    "Error": {
+        "title": "Something went wrong!",
+        "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
     }
 }

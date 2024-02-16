@@ -8,7 +8,7 @@ const Footer = () => {
     const locales = ['en', 'fr'] as const;
     const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
     return (
-        <div className="w-full h-auto bg-black sticky top-0 px-4 py-4 flex-col justify-center items-center footer-container text-xs md:text-sm lg:text-sm xl:text-sm">
+        <div className="w-full h-auto bg-black sticky top-0 px-4 py-4 flex-col justify-center items-center footer-container text-xs md:text-sm lg:text-sm xl:text-sm mt-auto">
             <div className="flex w-full justify-center items-center">
                 DOLLARD-DES-ORMEAUX, PIERREFONDS, ROXBORO, BEACONSFIELD, KIRKLAND,<br/>
                 SAINT-ANNE-DE-BELLEVUE, SENNEVILLE, BAIE D`URFÉ, L`ÎLE-BIZARD, POINTE-CLAIRE, DORVAL, LACHINE,<br/>
