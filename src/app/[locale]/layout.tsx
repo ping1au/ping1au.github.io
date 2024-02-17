@@ -20,13 +20,16 @@ async function getMessages(locale: string) {
     try {
       return (await import(`../../../messages/${locale}.json`)).default
     } catch (error) {
-      notFound()
+      console.log("NOT FOUND");
+      notFound();
     }
   }
 
 //function to generate the routes for all the locales
-export async function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
+export function generateStaticParams() {
+  return locales.map((locale) => (
+      {locale}
+    ));
 }
 
 export default async function LocaleLayout({

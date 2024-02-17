@@ -5,6 +5,18 @@ import Navigation from "@/app/_components/navigation";
 import { NextIntlClientProvider } from 'next-intl';
 import {redirect} from 'next/navigation';
 
+// export default function NotFound() {
+//     redirect('/en/not-found');
+// }
+
+export const dynamicParams = false;
+
 export default function NotFound() {
-    redirect('/en/not-found');
-}
+    return (
+      <html lang="en">
+        <body>
+          <Error statusCode={404} />
+        </body>
+      </html>
+    );
+  }
