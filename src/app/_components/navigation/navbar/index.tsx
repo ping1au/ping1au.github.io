@@ -136,7 +136,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                                       <span className="">&#9993; </span>info@fdcrenovations.com
                                     </Link></div>
                                     <div><Link className="hover:bg-sky-700" href="https://instagram.com/fdcrenovations" target="_blank">
-                                      <span className="">🅾</span>@fdcrenovations
+                                      <span className="">🅾 </span>@fdcrenovations
                                     </Link></div>
                               {/* <div className="grid grid-cols-4"> */}
                                 {/* <div className="w-fit inline-block"><Link className="hover:bg-sky-700 w-fit" href="https://facebook.com/FDCFurnishings/" target="_blank">
