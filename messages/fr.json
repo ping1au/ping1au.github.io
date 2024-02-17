@@ -117,7 +117,7 @@
         "locale": "{locale, select, en {anglais} fr {français}}",
         "language": "FR"
     },"NotFoundPage": {
-        "title": "Nous sommes navrés.        ",
+        "title": "Nous sommes navrés.",
         "description": "La page que vous avez demandé n’est pas disponible.\n\nVous ne trouvez pas ce que vous cherchez ? Commencez sur la page d’accueil."
     },"Error": {
         "title": "Something went wrong!",
