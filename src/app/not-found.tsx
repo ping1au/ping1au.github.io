@@ -34,10 +34,10 @@ export default function NotFound()   {
                     </Error> */}
                 </div>
                 <div className="title-container mx-auto py-8 text-base md:text-lg lg:text-xl xl:text-2xl">
-                    We're sorry.<br/>Nous sommes navrés.
+                    We&apos;re sorry.<br/>Nous sommes navrés.
                 </div>
                 <div className='intro-container'>
-                    The page you requested isn't available.<br/>Can't find what you're looking for? Start from our homepage.
+                    The page you requested isn&apos;t available.<br/>Can&apos;t find what you&apos;re looking for? Start from our homepage.
                 </div>
                 <div className='intro-container'>
                 La page que vous avez demandé n’est pas disponible.<br/>Vous ne trouvez pas ce que vous cherchez ? Commencez sur la page d’accueil.
