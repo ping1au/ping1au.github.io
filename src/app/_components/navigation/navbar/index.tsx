@@ -135,6 +135,9 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                               <div><Link className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
                                       <span className="">&#9993; </span>info@fdcrenovations.com
                                     </Link></div>
+                                    <div><Link className="hover:bg-sky-700" href="https://www.facebook.com/FDCFurnishings/" target="_blank">
+                                      <span className="">ⓕ </span>FDC Renovations
+                                    </Link></div>
                                     <div><Link className="hover:bg-sky-700" href="https://instagram.com/fdcrenovations" target="_blank">
                                       <span className="">🅾 </span>@fdcrenovations
                                     </Link></div>

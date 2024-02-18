@@ -11,15 +11,16 @@ export default function Home() {
     return (
         <>
             <div className="flex-col home-container mx-auto bg-white">
-                <div className="grid grid-cols-4 banner-container place-items-center">
+                <div className="2xl:grid 2xl:grid-cols-4 xl:grid xl:grid-cols-4 lg:grid log:grid-cols-4 md:grid md:grid-cols-4 sm:grid banner-container place-items-center">
                     <div className='md:px-1 xl:px-10 2xl:px-10 px-0'>
                         <Image src={t('left-pic-src')}
                             //width={400}
-                            width={1000}
-                            height={400}
-                            alt="right tag"
+                            width={0}
+                            height={0}
+                            alt="left tag"
                             //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
-                            className='w-full'
+                            //className='w-full'
+                            className='2xl:w-full xl:w-full lg:w-full md:w-full'
                             /></div>
                     <div className="col-span-2"><Image src={t('banner-src')}
                             //width={400}
@@ -30,13 +31,23 @@ export default function Home() {
                             className='w-full'
                             /></div>
                     <div className='md:px-1 xl:px-10 2xl:px-10 px-0'>
+                        <Image src="/images/membership.png"
+                                //width={400}
+                                width={100}
+                                height={100}
+                                alt="membership"
+                                //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                                className='2xl:w-full xl:w-full lg:w-full md:w-full'
+                                //className='w-full'
+                        />
                         <Image src={t('right-pic-src')}
                             //width={400}
-                            width={1000}
-                            height={400}
+                            width={0}
+                            height={0}
                             alt="right tag"
                             //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
-                            className='w-full'
+                            className='2xl:w-full xl:w-full lg:w-full md:w-full'
+                            //className='w-full'
                     /></div>
             </div>
             

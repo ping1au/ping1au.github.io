@@ -31,6 +31,10 @@ import {useTranslations} from 'next-intl';
                               <span className="text-lg">✆ </span>514-606-1705</a></p>
                     <p><span className="field-header">{t('email')}</span></p><p><a className="hover:bg-sky-100" href="mailto:info@fdcrenovations.com">
                               <span className="text-lg">✉ </span>info@fdcrenovations.com</a></p>
+                    <p><span className="field-header">Facebook: </span></p><p><a className="hover:bg-sky-100" href="https://www.facebook.com/FDCFurnishings/" target="_blank">
+                              <span className="text-lg">ⓕ </span>FDC Renovations</a></p>
+                    <p><span className="field-header">Instagram: </span></p><p><a className="hover:bg-sky-100" href="https://instagram.com/fdcrenovations" target="_blank">
+                              <span className="text-lg">🅾 </span>@fdcrenovations</a></p>
                 </div>
             </div>
             
