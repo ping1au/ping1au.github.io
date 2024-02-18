@@ -36,11 +36,13 @@ async function getTranslatedtext () {
     }
 }
 
-export default async function ServicePage({ params }: { params: { slug: string } })  {
-    const { slug } = params;
-
+export default async function ServicePage({ params }: { params: { slug: string, locale: string } })  {
+    //const { slug } = params;
+    const slug = params.slug;
+    const locale = params.locale;
+    
     /* Reads the content of the gallery sub dir and returns an array of strings */
-    const imageFilenames = await getImages(slug);
+    const imageFilenames = await getImages(slug, locale);
     let logoPath = "";
     let intro = "";
     let remarks = "";

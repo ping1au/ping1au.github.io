@@ -28,7 +28,16 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
   const galleryArray: { imageUrl: string; title: string }[] = [];
 
   images?.forEach((value, index) => {
-    const url =  "../../images/" + folder +"/"+value;
+    let url = "";
+    if (folder == "fdc_fix" && pathname.includes("fr")) {
+      url = "../../images/" + folder + "/fr/" +value;
+    } else if (folder == "fdc_fix" && pathname.includes("en")) {
+      url =  "../../images/" + folder +"/en/" + value;
+    } 
+    else {
+      url =  "../../images/" + folder + "/" +value;
+    }
+   // const url =  "../../images/" + folder +"/"+value;
     // to give dynamic link
     if (folder != "fdc_fix") {
         value = "";
@@ -36,35 +45,6 @@ const Gallery: React.FC<MyComponentProps> = ({folder, images}) => {
     const galleryObj = { imageUrl: url, title: value.slice(0,-5) };
     galleryArray.push(galleryObj);
   });
-
-//   const galleryTab = [
-// // you can add more image if you want
-//     {
-//       imageUrl: "https://themewagon.github.io/snapshot/images/model-1.jpg",
-//       type: "Nature",
-//       title: ""
-//     },
-//     {
-//       imageUrl: "https://themewagon.github.io/snapshot/images/model-2.jpg",
-//       type: "Nature",
-//       title: ""
-//     },
-//     {
-//       imageUrl: "https://themewagon.github.io/snapshot/images/model-3.jpg",
-//       type: "Nature",
-//       title: "Beautiful Work",
-//     },
-//     {
-//       imageUrl: "https://themewagon.github.io/snapshot/images/model-4.jpg",
-//       type: "Nature",
-//       title: "Beautiful Work",
-//     },
-//     {
-//       imageUrl: "https://themewagon.github.io/snapshot/images/model-5.jpg",
-//       type: "Nature",
-//       title: "Beautiful Work",
-//     },
-//   ];
 
   const slides = galleryArray.map((item) => ({
     src: item.imageUrl,

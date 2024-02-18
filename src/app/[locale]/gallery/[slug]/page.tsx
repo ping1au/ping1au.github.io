@@ -77,7 +77,7 @@ export default async function GalleryPage({ params }: { params: { slug: string }
     const { slug } = params;
 
     /* Reads the content of the gallery sub dir and returns an array of strings */
-    const imageFilenames = await getImages(slug);
+    const imageFilenames = await getImages(slug,'');
     const t = await getTranslations('GalleryPage');
     const keys = [slug] as const;
     return (

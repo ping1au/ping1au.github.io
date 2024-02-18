@@ -4,3 +4,5 @@ Disallow: /ftp/
 Disallow: /email/
 
 Sitemap: http://fdcrenovations.com/sitemap.xml
+Sitemap: http://fdcrenovations.com/sitemap-en.xml
+Sitemap: http://fdcrenovations.com/sitemap-fr.xml

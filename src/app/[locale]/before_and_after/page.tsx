@@ -35,8 +35,8 @@
 export default async function BeforeAfterPage() {
   
     /* Reads the content of the gallery sub dir and returns an array of strings */
-    const beforeImageFilenames =  await getImages("before");
-    const afterImageFilenames =  await getImages("after");
+    const beforeImageFilenames =  await getImages("before", '');
+    const afterImageFilenames =  await getImages("after", '');
     // const words = await getTranslatedtext();
     const locale = await getLocale();
     const before = "BEFORE";
