@@ -30,25 +30,30 @@ export default function Home() {
                             //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
                             className='w-full'
                             /></div>
-                    <div className='md:px-1 xl:px-10 2xl:px-10 px-0'>
-                        <Image src="/images/membership.png"
-                                //width={400}
-                                width={100}
-                                height={100}
-                                alt="membership"
-                                //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
-                                className='2xl:w-full xl:w-full lg:w-full md:w-full'
-                                //className='w-full'
-                        />
-                        <Image src={t('right-pic-src')}
-                            //width={400}
-                            width={0}
-                            height={0}
-                            alt="right tag"
-                            //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
-                            className='2xl:w-full xl:w-full lg:w-full md:w-full'
-                            //className='w-full'
-                    /></div>
+                    <div dir="rtl" className="md:px-1 xl:px-10 2xl:px-10 px-0 flex flex-col h-full">
+                        <div className="py-4">
+                           <Image src="/images/membership.png"
+                                 //width={400}
+                                 width={200}
+                                 height={200}
+                                 alt="membership"
+                                 //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                                 className='object-right-top float-none'
+                                 //className='w-full'
+                           />
+                        </div>
+                        <div className="h-full flex items-center justify-center">
+                           <Image src={t('right-pic-src')}
+                               //width={400}
+                               width={0}
+                               height={0}
+                               alt="right tag"
+                               //className='sm:w-full md:w-3/6 lg:w-2/5 xl:w-2/5 2xl:2/5'
+                               className='2xl:w-full xl:w-full lg:w-full md:w-full'
+                               //className='w-full'
+                          />
+                        </div>
+                    </div>
             </div>
             
             <div className="flex-col">
