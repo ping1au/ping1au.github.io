@@ -2,7 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /ftp/
 Disallow: /email/
+Disallow: /404.html
 
 Sitemap: http://fdcrenovations.com/sitemap.xml
-Sitemap: http://fdcrenovations.com/sitemap-en.xml
-Sitemap: http://fdcrenovations.com/sitemap-fr.xml
+Sitemap: http://fdcrenovations.com/sitemap_en.xml
+Sitemap: http://fdcrenovations.com/sitemap_fr.xml
