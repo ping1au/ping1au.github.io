@@ -40,7 +40,14 @@
         "serv3-intro": "ILes créateurs d'intérieur assistent et guident les clients tout au long de la phase de conception.\nNous vous aiderons à visualiser et à donner vie au projet en élaborant des plans\nunique à leur espace et à leurs goûts.",
         "serv1-src": "/images/service_fix_fr.png",
         "serv2-src": "/images/service_renovations_fr.png",
-        "serv3-src": "/images/service_design_fr.png"
+        "serv3-src": "/images/service_design_fr.png",
+        "design-title": "NOS SERVICES:",
+        "sub-title": {
+            "title1": "1) Consultation et Croquis Préliminaires", 
+            "title2": "2) Déssins Technique", 
+            "title3": "3) Tableau D'échantillons", 
+            "title4": "4) Mise en Scène et Décoartion"
+        }
     },
     "TestimonialSliderPage": {
         "intro": "Commentaires de nos clients"

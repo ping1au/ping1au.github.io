@@ -59,8 +59,7 @@ export default async function ServicePage({ params }: { params: { slug: string, 
             intro = serviceItems?.serv2_intro!;
             break;
         default:
-            logoPath = serviceItems?.serv3_src!;
-            intro = serviceItems?.serv3_intro!;
+            break;
     }
 
     return (
@@ -87,5 +86,5 @@ export default async function ServicePage({ params }: { params: { slug: string, 
 )}
 
 export async function generateStaticParams() {
-    return [{slug:'fdc_fix'}, {slug:'fdc_renovations'}, {slug:'fdc_design'}];
+    return [{slug:'fdc_fix'}, {slug:'fdc_renovations'}];
 }
