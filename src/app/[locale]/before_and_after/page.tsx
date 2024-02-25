@@ -1,35 +1,23 @@
-// export const metadata = {
-//     title: "FDC Before and After Renovations",
-//     description: "Areas before and after our renovations",
-//   }
+export const metadata = {
+    title: "FDC Before and After Renovations",
+    description: "Check out different areas before and after our thorough and professional renovations.",
+  }
   
-  import React from "react";
-  import ComparisonGallery from "@/app/_components/ComparisonGallery";
-  import { getImages } from '@/app/_components/getImage';
-  import { getLocale } from "next-intl/server";
+import React from "react";
+import ComparisonGallery from "@/app/_components/ComparisonGallery";
+import { getImages } from '@/app/_components/getImage';
+import { getLocale } from "next-intl/server";
 
-//   export const getTranslatedtext = async () =>  {
-//     try {
-//         const locale = await getLocale();
-//         console.log("locale is " + locale);
-//         let beforeText = "";
-//         let afterText = "";
-        
-//         if (locale == "en") {
-//             beforeText = "BEFORE";
-//             afterText = "AFTER";
-//         } else {
-//             beforeText = "AVANT";
-//             afterText = "APRÈS";
-//         }
-//         return (
-//             {
-//                 before: beforeText,
-//                 after: afterText,
-//             });
-//     } catch (error: any) {
-//         console.log(error);
-//     }
+// export async function generateMetadata({ params }: { params: { locale: string } }){
+//     const { locale } = params;
+//     console.log("locale is " + locale);
+//     const messages = (await import(`../../../../message/${locale}.json`)).default;
+
+//     // return an object
+//     return {
+//         title: messages.BeforeAfterPage.metadata.title,
+//         description: messages.BeforeAfterPage.metadata.description,
+//     };
 // }
 
 export default async function BeforeAfterPage() {

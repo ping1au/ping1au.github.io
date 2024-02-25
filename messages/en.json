@@ -37,7 +37,7 @@
         },
         "serv1-intro": "Do you have a long list of small unfinished home projects or maybe some urgent needed repairs!\nOur fix-it division is tailored to complete any misc project at very reasonable costs.",
         "serv2-intro": "FDC has a complete experienced team to deliver full turnkey quality renovations on time and on budget. \nWhether it's a Bathroom, Kitchen, Basement or any other project we will guide you through the process.",
-        "serv3-intro": "Interior designers assisting and guiding customers through the design phase.\nWe will help you visualize and make your project come to life by making plans \nunique to their home and personnal tastes using 3D software.",
+        "serv3-intro": "Interior designers assisting and guiding customers through the design phase.\nWe will help you visualize and make your project come to life by making plans \nunique to your home and personal tastes using 3D software.",
         "serv1-src": "/images/service_fix.webp",
         "serv2-src": "/images/service_renovations.png",
         "serv3-src": "/images/service_design.webp",
@@ -113,6 +113,10 @@
         }
     },
     "BeforeAfterPage": {
+        "metadata": {
+            "title": "FDC Before and After Renovations",
+            "description": "Check out different areas before and after our thorough and professional renovations."
+        },
         "before": "BEFORE",
         "after": "AFTER"
     },

@@ -7,7 +7,7 @@ import {getTranslations} from 'next-intl/server';
 
 type Props = {
     params: { id: string }
-  }
+}
 
 export async function generateMetadata(
     { params }: Props

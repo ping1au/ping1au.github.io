@@ -52,36 +52,6 @@
     "TestimonialSliderPage": {
         "intro": "Commentaires de nos clients"
     },
-    "GalleryPageOld":[
-        {
-            "title": "Sous-sols",
-            "description": "Sous-sols non fini, réparations après-sinistre ou d'inondations, ajout de pièce ou de salle de bain, nouveau revêtement de sol."
-        },
-        {
-            "title": "Salles de bains",
-            "description": "Qu’il s’agisse d’une rénovation complet ou simplement d’un rafraîchissement, nous vous guiderons à chaque étape en utilisant des matériaux de qualité.\nLe résultat final est une salle de bains extraordinaire à des prix qui vous surprendront – dans le bon sens."
-        },
-        {
-            "title": "Foyers",
-            "description": "Nouvelles installations personnalisées ou conversions gaz/bois/électricité.\nNous pouvons faire de votre foyer un point central en utilisant des designs et des matériaux uniques qui attireront l'attention de tous."
-        },
-        {
-            "title": "Cuisines",
-            "description": "Concepts ouverts et extensions ou simples mises à jour. En utilisant des options d'armoires et de comptoirs en stock pour les budget serré ou des matériaux haut de gamme personnalisés,\nnous vous aiderons à compléter l'espace le plus important en ajoutant de la valeur à votre maison."
-        },
-        {
-            "title": "Extérieur",
-            "description": "Pergolas, gazebos, contours de piscine, grands espaces de terrasse à plusieurs niveaux utilisant une variété de bois ou de matériaux composites tels que TimberTech®, Trex®, Veranda®.\nNous proposons également des options d'abris 3 saisons utilisant des tissus de haute qualité tels que Sunbrella®."
-        },
-        {
-            "title": "Escaliers",
-            "description": "Menuiserie détaillée utilisant plusieurs variété de bois dur ou de matériaux stratifiés avec de nombreuses options de finitions sur les escaliers et les balustrades."
-        },
-        {
-            "title": "Carrelages",
-            "description": "Mosaïques, grands/petits formats, mosaïques, texturées, carrelage sur carrelage.\nNous sommes spécialisés dans toutes les applications avec des installations de qualité professionnelle pour les environnements commerciaux ou résidentiels."
-        }
-    ],
     "GalleryPage": {
         "basements": {
             "title": "Sous-sols",
@@ -113,6 +83,10 @@
         }
     },
     "BeforeAfterPage": {
+        "metadata": {
+            "title": "FDC Avant and Après Rénovations",
+            "description": "Découvrez différents domaines avant et après nos rénovations approfondies et professionnelles."
+        },
         "before": "AVANT",
         "after": "APRÈS"
     },

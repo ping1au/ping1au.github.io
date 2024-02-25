@@ -9,6 +9,11 @@ import Link from 'next/link';
 
 export const dynamicParams = false;
 
+export const metadata = {
+    title: "FDC Renovations",
+    description: "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession.",
+  };
+
 export default function NotFound()   {
     return (
       <html lang="en">
