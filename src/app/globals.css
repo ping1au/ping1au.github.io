@@ -8,9 +8,11 @@ body {
 
 div.slogan, div.contact {
   /* text-align: right; */
+  line-height: 24px;
   color: white;
   font-weight: bold;
   font-family: 'Eras Demi ITC';
+  vertical-align: middle;
 }
 
 div.footer-container {
@@ -125,6 +127,14 @@ div.navbar-container {
 
 .field-header {
   font-weight: bold;
+}
+
+.icon {
+  /* Stick icon to last word */
+  white-space: no-wrap;  
+  /* Make sure last word and icon will break ultimately */
+  display: inline-flex;
+  flex-wrap: wrap; 
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;
