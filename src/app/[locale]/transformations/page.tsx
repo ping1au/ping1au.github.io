@@ -3,6 +3,10 @@ import ComparisonGallery from '@/app/_components/ComparisonGallery';
 import { getImages } from '@/app/_components/getImage';
 import { useTranslations } from 'next-intl';
 
+interface TransformationsPageProps {
+  params: Promise<{ locale: string }>; // Change this line
+}
+
 // Static metadata fallback (used if generateMetadata is not active)
 export const metadata = {
   title: 'FDC Before and After Renovations',
@@ -18,7 +22,8 @@ export const metadata = {
 //   };
 // }
 
-export default async function TransformationsPage({ params }: { params: { locale: string } }) {
+//export default async function TransformationsPage({ params }: { params: { locale: string } }) {
+export default async function TransformationsPage({ params }: TransformationsPageProps) {
   //const t = useTranslations('BeforeAfterPage');
   const beforeImageFilenames = await getImages('before', '');
   const afterImageFilenames = await getImages('after', '');
