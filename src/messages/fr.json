@@ -1,0 +1,167 @@
+{
+    "Header": {
+        "quality-renovations": "Rénovations de qualité",
+        "for-your-home": "pour votre maison",
+        "call": "Appelez-nous pour une estimation gratuite!",
+
+        "home": "Maison",
+        "services": "Services",
+        "renovations": "Rénovations",
+        "interior-design": "Design d'Intérieur",
+        "testimonials": "Témoignages",
+        "gallery": "Galerie",
+        "kitchens": "Cuisines",
+        "bathrooms": "Salles de Bain",
+        "outdoor": "De Plein Air",
+        "interior_finishing": "Finition Intérieur",
+        "windows_and_doors" : "Fenêtre et Portes",
+        "electrical_and_plumbing": "Électricité et plomberie",
+        "transformations": "Transformations",
+
+        "your-project": "Votre projet, notre passion!",
+        "client-testimonials" : "Témoignages de clients",
+        "what-clients-say": "Découvrez ce que nos clients ont à dire sur FDC Rénovations!",
+        "before-and-after": "Transformations avant et après",
+        "see-differences": "Voyez les différences étonnantes",
+
+        "basements": "Sous-sols",
+        "fireplaces": "Foyers",
+        "stairs": "Escaliers",
+        "tilings": "Carrelages",
+        "before_and_after": "Avant et après",
+        "contact": "Contact"
+    },
+    "Home": {
+        "metadata": {
+            "title": "FDC Renovations",
+            "description": "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession."
+        },
+        "turnkey": "Rénovations clés",
+        "reno": "en main",
+        "int": "Design",
+        "design": "D’intérieur",
+        "intro1":"Du concept initial aux finitions finales, nous offrons une solution complète et unique adaptée aux besoins uniques de chaque client.",
+        "intro2":"Qu'il s'agisse d'une rénovation à petite échelle ou d'un développement à grande échelle, FDC vous couvre.",
+        "contact-us": "Contactez-nous",
+
+        "left-pic-src": "/images/left_tag_fr.png",
+        "banner-src": "/images/banner_fr.webp",
+        "right-pic-src": "/images/right_tag_fr.png",
+        "intro": "Sélectionnez le type de service vous avez besoin.",
+        
+        "renovations": "/services/renovations",
+        "renovations-src": "/images/icons/renovations.png",
+        "interior-design": "/services/interior_design",
+        "interior-src": "/images/icons/design.png"
+    },
+    "ServicePage": {
+        "metadata": {
+            "title": "FDC Renovations",
+            "description": "FDC Renovations turns Your Project into Our Passion - From plumbing, electrical, framing to detailed millwork and final paint we provide turnkey profession."
+        },
+        "renovations": {
+            "title": "FDC Renovations",
+            "description": "Your Project, our Passion!"
+        },
+        "interior_design": {
+            "title": "FDC Design",
+            "description": "xxxxx"
+        },
+
+        "renovations-intro": "FDC Renovations",
+        "interior-intro": "FDC Design",
+
+        "renovation-header":{
+            "header1": "Cuisines",
+            "header2": "Finition Intérieur",
+            "header3": "Salles de Bain",
+            "header4": "Fenêtre et Portes",
+            "header5" : "Extérieur",
+            "header6": "Électricité et plomberie"
+        },
+        "renovation-caption":{
+            "caption1":"Installation d'armoires et de comptoirs, montage d'appareils électroménagers et reconfiguration complète de l'aménagement.",
+            "caption2":"Cloisons sèches, peinture, finitions, revêtements de sol, escaliers, rampes et cheminées",
+            "caption3":"Rénovations complètes de salles de bains, améliorations de plomberie, tuiles, vanités et installation d'appareils sanitaires.",
+            "caption4":"Installation et remplacement de portes intérieures et extérieures et de fenêtres écoénergétiques.",
+            "caption5":"Terrasses, patios, pergolas et revêtements",
+            "caption6":"Nouvelles installations de systèmes, mises à niveau conformes au code et recâblage ou repiping complet."
+        },
+        "design-header":{
+            "header1":"Consultations gratuites",
+            "header2":"Sélection des luminaires et des finitions",
+            "header3":"Dessins techniques",
+            "header4":"Rendu 3D"
+        },
+        "design-caption":{
+            "caption1":"Guidance in selecting appropriate materials, fixtures, hardware, and finishes tailored to your design plan and build requirements.",
+            "caption2":"Guidance in selecting appropriate materials, fixtures, hardware, and finishes tailored to your design plan and build requirements.",
+            "caption3":"Conseils dans le choix des matériaux, des accessoires, du matériel et des finitions appropriés, adaptés à votre plan de conception et à vos exigences de construction.",
+            "caption4":"Visualisations réalistes de votre espace avec une échelle, des matériaux et un éclairage précis pour prévisualiser la conception finale avant la construction."
+        }
+    },
+    "TestimonialSliderPage": {
+        "intro": "Témoignages de clients",
+        "remarks": "Découvrez ce que nos clients ont à dire sur FDC Rénovations !"
+    },
+    "GalleryPage": {
+        "kitchens": {
+            "title": "Kitchens",
+            "description": "Unfinished basements, repairs due to water damage or floods, room or bathroom addition, new flooring."
+        },
+        "bathrooms": {
+            "title": "Bathrooms",
+            "description": "Whether it’s a complete remodel or expansion or just a refresh, we will guide you though every step using only quality materials. The end result is a beautiful bathroom at costs that will surprise you – in a good way.\n"
+        },
+        "outdoor": {
+            "title": "Outdoor",
+            "description": "Complete new custom installs or simple gas/wood/electric conversions. We can make your fireplace be a focal point using unique designs & materials that will catch everyone's eye.\n"
+        },
+        "interior_finishing": {
+            "title": "Interior Finishing",
+            "description": "Open concepts and expansions or simple updates and refreshes.\nUsing stock cabinets & counter options for those on a tight budget or using custom high end materials, we will assist you to complete the most important space and add value to your home."
+        },
+        "windows_and_doors": {
+            "title": "Windows and Doors",
+            "description": "Pergolas, Gazebos, small pool surrounds, large multilevel deck spaces using a variety of wood or composite materials such as TimberTech® , Trex®, Veranda®.\nWe also offer 3 season enclosure options using high quality fabrics such as Sunbrella®."
+        },
+        "electrical_and_plumbing": {
+            "title": "Electrical & Plumbing",
+            "description": "Detailed millwork using any variety of hardwood or laminate materials with many color stain options on stairs and railings."
+        },
+        "stairs": {
+            "title": "Escaliers",
+            "description": "Menuiserie détaillée utilisant plusieurs variété de bois dur ou de matériaux stratifiés avec de nombreuses options de finitions sur les escaliers et les balustrades."
+        },
+        "tilings": {
+            "title": "Carrelages",
+            "description": "Mosaïques, grands/petits formats, mosaïques, texturées, carrelage sur carrelage.\nNous sommes spécialisés dans toutes les applications avec des installations de qualité professionnelle pour les environnements commerciaux ou résidentiels."
+        }
+    },
+    "TransformationsPage": {
+        "metadata": {
+            "title": "FDC Avant and Après Rénovations",
+            "description": "Découvrez différents domaines avant et après nos rénovations approfondies et professionnelles."
+        },
+        "intro": "Transformations avant et après",
+        "remarks": "Voyez les différences étonnantes"
+    },
+    "ContactPage": {
+        "phone": "Tél: ",
+        "email": "Courriel: "
+    },
+    "LocaleSwitcher": {
+        "locale": "{locale, select, en {anglais} fr {français}}",
+        "language": "FR",
+        "selectLanguage": "Sélectionnez",
+        "english": "Anglais",
+        "french": "Français"
+    }
+    ,"NotFoundPage": {
+        "title": "Nous sommes navrés.",
+        "description": "La page que vous avez demandé n’est pas disponible.\n\nVous ne trouvez pas ce que vous cherchez ? Commencez sur la page d’accueil."
+    },"Error": {
+        "title": "Something went wrong!",
+        "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+    }
+}

@@ -1,252 +1,340 @@
-'use client'
-import React from "react";
+'use client';
+import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Dropdown from "./Dropdown";
-import { GetMenuItems } from '../getMenuItems';
-import {createSharedPathnamesNavigation} from 'next-intl/navigation';
-import { useTranslations } from 'next-intl';
+import { GetMenuItems, MenuItem } from '../getMenuItems';
+import { Link as IntlLink, usePathname } from '@/i18n/navigation';
+import Link from "next/link";
+import { useLocale, useTranslations } from 'next-intl';
 import LocaleSwitcher from '@/app/_components/LocaleSwitcher';
 import Image from "next/image";
+import { Parisienne } from 'next/font/google';
+import { useRouter } from 'next/navigation';
 
-// export interface MenuItem {
-//   key: number;
-//   title: string;
-//   route?: string;
-//   children?: MenuItem[];
-// }
-
-// const menuItems: MenuItem[] = [
-  
-//   {
-//     key:1,
-//     title: "HOME",
-//     route: "/",
-//   },
-//   {
-//     key:2,
-//     title: "TESTIMONIALS",
-//     route: "/testimonials",
-//   },
-//   {
-//     key:3,
-//     title: "GALLERY",
-//     children: [
-//       {
-//         key:31,
-//         title: "Basements",
-//         route: "/gallery/basements",
-//       },
-//       {
-//         key:32,
-//         title: "Bathrooms",
-//         route: "/gallery/bathrooms",
-//       },
-//       {
-//         key:33,
-//         title: "Fireplaces",
-//         route: "/gallery/fireplaces",
-//       },
-//       {
-//         key:34,
-//         title: "Kitchens",
-//         route: "/gallery/kitchens",
-//       },
-//       {
-//         key:35,
-//         title: "Outdoor",
-//         route: "/gallery/outdoor",
-//       },
-//       {
-//         key:36,
-//         title: "Stairs",
-//         route: "/gallery/stairs",
-//       },
-//       {
-//         key:37,
-//         title: "Tilings",
-//         route: "/gallery/tilings",
-//       },
-//     ],
-//   },
-//   {
-//     key:4,
-//     title: "BEFORE & AFTER PHOTOS",
-//     route: "/before_and_after",
-//   },
-//   {
-//     key:5,
-//     title: "CONTACT",
-//     route: "/contact",
-//   }
-//   // ,
-//   // {
-//   //   key:6,
-//   //   title: "FR",
-//   //   route: "#",
-//   // },
-// ];
-
+const parisienne = Parisienne({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+});
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
   const locales = ['en', 'fr'] as const;
-  const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
+  const locale  = useLocale(); // or useLocale() if available
   const t = useTranslations('Header');
   const menuItems = GetMenuItems();
+  const [openDropdownKey, setOpenDropdownKey] = useState<number | null>(null);
+  const pathname = usePathname();
+
+  const normalizedPathname = pathname || '/';
+
+  console.log('Pathname (internal):', pathname, 'Normalized:', normalizedPathname);
+
+  const handleToggle = (key: number) => {
+    setOpenDropdownKey((prev) => (prev === key ? null : key));
+  };
+
+  const backgroundImages = [
+    '/images/20210928_190705.jpg',
+    '/images/20220805_171610.jpg',
+    '/images/20240103_102846.jpg',
+    '/images/20240820_152201.jpg',
+    '/images/20240823_130855.jpg',
+    '/images/20250617_114842.jpg',
+  ];
+
+  const [currentBackground, setCurrentBackground] = useState<string | null>(null);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout | undefined;
+    const backgroundMap: { [key: string]: string | null } = {
+      '/': '/images/20210928_190705.jpg',
+      '/services/renovations': '/images/bg_reno.webp',
+      '/services/interior_design': '/images/bg_interior.webp',
+      '/transformations': '/images/bg_trans.jpg',
+      '/testimonials': null,
+      '/gallery/basements': null,
+      '/gallery/bathrooms': null,
+      '/gallery/fireplaces': null,
+      '/gallery/kitchens': null,
+      '/gallery/outdoor': null,
+      '/gallery/stairs': null,
+    };
+
+    if (normalizedPathname === "/") {
+      setCurrentBackground(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
+      interval = setInterval(() => {
+        setCurrentBackground(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
+      }, 5000);
+    } else {
+      const bg = backgroundMap[normalizedPathname] || "";
+      setCurrentBackground(bg);
+    }
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [normalizedPathname, backgroundImages]);
+
+  const handlePrev = () => {
+    if (normalizedPathname === "/") {
+      const currentIndex = backgroundImages.indexOf(currentBackground || '');
+      const prevIndex = currentIndex <= 0 ? backgroundImages.length - 1 : currentIndex - 1;
+      setCurrentBackground(backgroundImages[prevIndex]);
+    }
+  };
+
+  const handleNext = () => {
+    if (normalizedPathname === "/") {
+      const currentIndex = backgroundImages.indexOf(currentBackground || '');
+      const nextIndex = currentIndex >= backgroundImages.length - 1 ? 0 : currentIndex + 1;
+      setCurrentBackground(backgroundImages[nextIndex]);
+    }
+  };
+
+  const isActive = (route: string | undefined): boolean => {
+    if (!route) return false;
+
+    // Normalize resolved pathnames to template form for type-safe comparison
+    const normalizeToTemplate = (path: string): string => {
+      if (path === '/') return '/';
+
+      const segments = path.split('/').filter(Boolean);
+      if (segments.length < 2) return path; // Static like '/testimonials'
+
+      const staticPrefix = '/' + segments.slice(0, -1).join('/');
+      switch (staticPrefix) {
+        case '/services':
+          return '/services/[slug]';
+        case '/gallery':
+          return '/gallery/[slug]';
+        default:
+          return path; // Static routes unchanged
+      }
+    };
+
+    const normalizedPath = normalizeToTemplate(normalizedPathname);
+    const normalizedRoute = normalizeToTemplate(route);
+
+    return normalizedPath === normalizedRoute || (normalizedPath.startsWith(normalizedRoute) && normalizedRoute !== "/");
+  };
+
+  const NavLink = ({ href, children, className, ...props }: { href: string; children: React.ReactNode; className?: string; [key: string]: any }) => {
+    const isInternal = href.startsWith('/');
+    if (isInternal) {
+      return (
+        <IntlLink href={href as any} locale={locale} className={className} {...props}>
+          {children}
+        </IntlLink>
+      );
+    } else {
+      return (
+        <Link href={href} className={className} {...props}>
+          {children}
+        </Link>
+      );
+    }
+  };
+
   return (
     <>
-      <div className="w-full h-auto bg-black sticky top-0 z-40">
-        {/* <div className="container mx-auto px-4 h-full"> */}
-        <div className="header-container pl-1 pr-1 h-full">
-          <div className="flex justify-between items-center h-full">
-            <div className="w-1/5 flex justify-center">
-              <Logo />
-              {/* sidebar buttons */}
-              <button type="button" className="inline-flex items-center md:hidden"
-                onClick={toggle} >
-                  <svg xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24">
-                      <path fill="#fff" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/>
+      <div
+        className="relative flex justify-between items-start w-full h-auto nav-container sticky top-0 z-50"
+        style={{
+          backgroundColor: normalizedPathname.startsWith('/gallery') ? '#000000' : 'transparent',
+        }}
+      >
+        {currentBackground && normalizedPathname !== '/testimonials' && (
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${currentBackground})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: 0.7,
+            }}
+          />
+        )}
+        {currentBackground && normalizedPathname !== '/testimonials' && (
+          <div
+            className="absolute inset-0 z-1"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            }}
+          />
+        )}
+        <div className="header-container h-full w-full relative z-10">
+          <div className="flex flex-col h-1/2">
+            <div className="flex justify-between items-center h-full">
+              <div className="w-1/5 flex flex-col justify-center pl-8 pt-8 pb-2">
+                <Logo />
+                <button type="button" className="inline-flex items-center md:hidden" onClick={toggle}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="#fff" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/>
                   </svg>
-              </button>
-            </div>
-            
-            <div className="flex-col w-4/5">
-                <div className="top-container flex justify-end text-xs md:text-sm lg:text-sm xl:text-sm">
-                      {/* <div className="self-center slogan divide-x-2 divide-blue-300">
-                        <span className="slogan px-4 py-1">CALL US FOR A FREE ESTIMATE</span>
-                        <span className="px-4 py-1"></span>
-                      </div>
-                      <div className="contact">
-                        <span className="">
-                          <a className="hover:bg-sky-700" href="tel:+15146061705">
-                          <span className="text-lg">✆ </span>514-606-1705</a><br />
-                          <a className="hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
-                          <span className="text-lg">✉ </span>info@fdcrenovations.com</a>
-                        </span>
-                      </div> */}
-                      <div className="grid grid-cols-2 divide-x-2 gap-3">
-                          <div className=" flex slogan self-center justify-end">{t('call')}</div>
-                          <div className="contact flex flex-col px-2">
-                              <div className="flex items-center">
-                                    <Link className="icon hover:bg-sky-700" href="tel:+15146061705">
-                                      <svg className="w-6 h-6 text-green-600 dark:text-green-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                          <path d="M8 4a2.6 2.6 0 0 0-2 .9 6.2 6.2 0 0 0-1.8 6 12 12 0 0 0 3.4 5.5 12 12 0 0 0 5.6 3.4 6.2 6.2 0 0 0 6.6-2.7 2.6 2.6 0 0 0-.7-3L18 12.9a2.7 2.7 0 0 0-3.8 0l-.6.6a.8.8 0 0 1-1.1 0l-1.9-1.8a.8.8 0 0 1 0-1.2l.6-.6a2.7 2.7 0 0 0 0-3.8L10 4.9A2.6 2.6 0 0 0 8 4Z"/>
-                                        </svg>
-                                        514-606-1705
-                                    </Link>
-                                </div>
-                                <div className="flex items-center">
-                                    <Link className="icon hover:bg-sky-700" href="mailto:info@fdcrenovations.com">
-                                      <svg className="w-6 h-6 text-red-600 dark:text-red-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.5a6 6 0 0 1 1.5 4v4a1 1 0 1 1-2 0v-4a4 4 0 0 0-4-4h-.5C5 6 3 8 3 10.5V16c0 .6.4 1 1 1h7v3c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3h5c.6 0 1-.4 1-1v-6a4 4 0 0 0-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"/>
-                                      </svg>
-                                       info@fdcrenovations.com
-                                    </Link>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <Link className="icon hover:bg-sky-700" href="https://www.facebook.com/FDCFurnishings/" target="_blank">
-                                      <Image
-                                                src="/images/facebook.png"
-                                                alt="Facebook"
-                                                className="relative"
-                                                width={24}
-                                                height={24}            
-                                                sizes='100vw'
-                                              />
-                                            FDC Renovations
-                                    </Link>
-                                  </div>
-                                  <div className="flex items-center">
-                                      <Link className="icon hover:bg-sky-700" href="https://instagram.com/fdcrenovations" target="_blank">
-                                        <Image
-                                                src="/images/instagram.png"
-                                                alt="Instagram"
-                                                className="relative"
-                                                width={24}
-                                                height={24}            
-                                                sizes='100vw'
-                                              />
-                                            @fdcrenovations
-                                      </Link>
-                                  </div>
-                          </div>
-                      </div>
+                </button>
+              </div>
+              <div className="flex-col w-4/5 px-8 pt-8 pb-2 text-white">
+                <div className="navbar-container flex justify-end items-center md:gap-6 gap-8">
+                  {menuItems.map((item) => (
+                    item.children ? (
+                      <Dropdown
+                        key={item.key}
+                        item={item}
+                        isOpen={openDropdownKey === item.key}
+                        onToggle={() => handleToggle(item.key)}
+                        isActive={isActive}
+                      />
+                    ) : (
+                      <NavLink
+                        className={`hover:text-orange-500 hidden md:flex gap-x-6 menu-list ${isActive(item.route) ? 'text-[#f79e42]' : ''}`}
+                        href={item.route || '/'}
+                        key={item.key}
+                      >
+                        {item.title}
+                      </NavLink>
+                    )
+                  ))}
+                  <LocaleSwitcher />
                 </div>
-                    
-                <div className="navbar-container flex justify-center items-center flex gap-8">
-                      {menuItems.map((item, index) => {
-                          return item.hasOwnProperty("children") ? (
-                          <Dropdown key = {index} item = {item} />
-                      ) : (
-                          <Link className="hover:text-blue-500 hidden md:flex gap-x-6 menu-list" href={item?.route || ""} 
-                          key = {index}>
-                              {item.title}
-                          </Link>
-                      );
-                    })}
-                    <LocaleSwitcher />
-                    
-                    {/* <ul className="hidden md:flex gap-x-6 menu-list ">
-                      <li>
-                        <Link href="/">
-                          <p>HOME</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/testimonials">
-                          <p>TESTIMONIALS</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Dropdown>
-                            <DropdownTrigger>
-                                <Link href="#">
-                                    <p>GALLERY</p>
-                                </Link>
-                            </DropdownTrigger>
-                            <DropdownMenu aria-label="Static Actions">
-                                <DropdownItem key="basements">Basements</DropdownItem>
-                                <DropdownItem key="bathrooms">Bathrooms</DropdownItem>
-                                <DropdownItem key="fireplaces">Fireplaces</DropdownItem>
-                                <DropdownItem key="kitchens">Kitchens</DropdownItem>
-                                <DropdownItem key="kitchens">Outdoor</DropdownItem>
-                                <DropdownItem key="kitchens">Stairs</DropdownItem>
-                                <DropdownItem key="kitchens">Tiling</DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
-                      </li>
-                      <li>
-                        <Link href="/before_and_after">
-                          <p>BEFORE & AFTER PHOTOS</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">
-                          <p>CONTACT</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <p>FR</p>
-                        </Link>
-                      </li>
-                    </ul> */}
-                    
-                    {/* button hidden for later use
-                    <div className="hidden md:block">
-                      <Button />
-                    </div> */}
-                </div>
+              </div>
             </div>
-            
-          
+            <div className="relative z-20">{getPageContent()}</div>
           </div>
         </div>
       </div>
     </>
   );
+
+  function getPageContent() {
+    switch (normalizedPathname) {
+      case "/":
+        return (
+          <div className="relative z-20">
+            <div className="text-white pl-8">
+              RBQ; 5853-6400-01
+            </div>
+            <div className="flex justify-between items-start w-full h-auto nav-container sticky top-0 z-20">
+              <button
+                onClick={handlePrev}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 border-2 border-gray-200 text-gray-200 text-4xl px-2 rounded-full hover:text-gray-600 z-20"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={handleNext}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 border-2 border-gray-200 text-gray-200 text-4xl px-2 rounded-full hover:text-gray-600 z-20"
+              >
+                &gt;
+              </button>
+              <div className="pl-16 h-full w-full">
+                <div className="pt-8 text-white font-[Open_Sans] font-black text-5xl">
+                  <p>{t('quality-renovations')}</p>
+                  <p className="pt-8">{t('for-your-home')}</p>
+                </div>
+                <div className="flex justify-between items-center mt-4">
+                  <div className="xs:text-xs sm:text-sm">
+                    <NavLink
+                      href="tel:+15146061705"
+                      className="w-full bg-[#fe8d24] text-white font-bold px-4 py-4 hover:bg-orange-600 transition duration-300"
+                    >
+                      {t('call')}
+                    </NavLink>
+                  </div>
+                  <div className="pt-8">
+                    <Image
+                      src="/images/membership.png"
+                      width={200}
+                      height={200}
+                      alt="membership"
+                      className="object-right-top float-none"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      case "/services/renovations":
+        return (
+          <div className="relative z-20">
+            <div className="px-8 flex flex-col justify-center items-start w-full h-1/2 sticky top-0 z-20 text-white py-16 gap-4">
+              <div className="font-black text-7xl">
+                <span className="italic">FDC </span>
+                <span>Renovations</span>
+              </div>
+              <div>{t('your-project')}</div>
+            </div>
+          </div>
+        );
+      case "/services/interior_design":
+        return (
+          <div className="relative z-20">
+            <div className="px-8 flex flex-col justify-center items-start w-full h-1/2 sticky top-0 z-20 text-white py-16">
+              <div className="font-black text-7xl">
+                <span className="italic">FDC </span>
+                <span className={parisienne.className}>Design</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        );
+      case "/testimonials":
+        return (
+          <div className="relative z-20 max-w-6xl mx-auto px-2 md:px-4">
+            <div className="flex flex-col h-1/2 sticky top-0 z-20 text-white py-16">
+              <div className="font-black text-5xl py-4">{t('client-testimonials')}</div>
+              <div>{t('what-clients-say')}</div>
+            </div>
+          </div>
+        );
+      // case "/contact":
+      //   return (
+      //     <div className="relative z-20">
+      //       <div><p className="text-5xl text-white">Get in Touch</p></div>
+      //       <div className="flex justify-center items-center mt-4">
+      //         <NavLink
+      //           href="tel:+15146061705"
+      //           className="bg-orange-500 text-white font-bold py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300"
+      //         >
+      //           Call Now
+      //         </NavLink>
+      //       </div>
+      //     </div>
+      //   );
+      case "/gallery/kitchens":
+      case "/gallery/bathrooms":
+      case "/gallery/outdoor":
+      case "/gallery/interior_finishing":
+      case "/gallery/electrical_and_plumbing":
+        return (
+          <div className="relative z-20">
+            <div className="px-8 pt-8 h-1/3"><p className="text-5xl text-white text-bold">{t(`${normalizedPathname.split('/')[2]}`)}</p></div>
+          </div>
+        );
+      case "/transformations":
+        return (
+          <div className="relative z-20">
+            <div className="flex flex-col justify-center items-center w-full h-1/2 sticky top-0 z-20 text-white py-16">
+              <div className="font-bold text-5xl px-4 py-4">{t('before-and-after')}</div>
+              <div>{t('see-differences')}</div>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
+  }
 };
 
 export default Navbar;
+function useParams(): { locale: string } {
+  // Try to extract the locale from the pathname (e.g., /en/..., /fr/...)
+  if (typeof window !== 'undefined') {
+    const match = window.location.pathname.match(/^\/([a-zA-Z-]{2,5})(\/|$)/);
+    return { locale: match ? match[1] : 'en' };
+  }
+  // Fallback for SSR or unknown
+  return { locale: 'en' };
+}

@@ -1,85 +1,60 @@
 'use client'
-import Image, { ImageProps } from 'next/image';
-import React, { useState } from "react";
+import Image from 'next/image';
+import React from 'react';
 
-// Define the prop types for the component
+// Define prop types
 type ImageArray = string[] | undefined;
 
-interface MyComponentProps {
+interface ComparisonGalleryProps {
   folder: string;
   images: ImageArray;
 }
 
-const ComparisonGallery: React.FC<MyComponentProps> = ({images}) => {
+const ComparisonGallery: React.FC<ComparisonGalleryProps> = ({ folder, images }) => {
+  // Create array of before/after pairs
+  const imagePairs = images?.map((value, index) => ({
+    before: `/images/before/${value}`,
+    after: `/images/after/${value}`,
+    title: `Image ${index + 1}`,
+  })) || [];
 
-  const [open, setOpen] = useState(false);
-  const [image, setImage] = useState("");
-
-  const beforeGalleryArray: { imageUrl: string; title: string }[] = [];
-  const afterGalleryArray: { imageUrl: string; title: string }[] = [];
-  const galleryArray: { imageUrl: string; title: string }[] = [];
-
-  images?.forEach((value, index) => {
-      const beforeUrl =  "../images/before/"+value;
-      const afterUrl = "/images/after/"+value;
-      const beforeGalleryObj = { imageUrl: beforeUrl, title: "before" + (index + 1).toString() };
-      const afterGalleryObj = { imageUrl: afterUrl, title: "after" + (index + 1).toString() };
-      // const arrowObj = {imageUrl: "/images/arrow.png", title: "arrow"};
-      // galleryArray.push(beforeGalleryObj);
-      // galleryArray.push(arrowObj);
-      // galleryArray.push(afterGalleryObj);
-      beforeGalleryArray.push(beforeGalleryObj);
-      afterGalleryArray.push(afterGalleryObj);
-  });
+  //console.log('Image pairs:', imagePairs);
 
   return (
-    <>
-        {beforeGalleryArray.map((x, index) => {
-                return (
-                  <div className="container grid grid-cols-7 m-auto w-full" key={'bigDiv'+index}>
-                        <div className="col-span-3 gallery-container w-full flex items-center justify-center py-4" key={'divbefore'+index}>
-                            <Image
-                                className='ba-image'
-                                width={400}
-                                height={300}
-                                // layout="fill"
-                                // objectFit="cover"
-                                alt={'alt'}
-                                src={`../images/before/${index+1}.webp`}
-                                key={'before' + index+1}
-                                style={{ width: '100%' }}
-                                // onClick={onClick ? onClick : undefined}
-                              />
-                          </div>
-                          <div className="w-full flex justify-center items-center  py-4" key={'arrow' + index}>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#F15A29" className="w-full">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-</svg>
-
-                          </div>
-                          <div className="col-span-3 gallery-container w-full flex items-center justify-center py-4" key={'divafter'+index}>
-                            <Image
-                                className='ba-image'
-                                width={400}
-                                height={300}
-                                // layout="fill"
-                                // objectFit="cover"
-                                alt={'alt'}
-                                src={`../images/after/${index+1}.webp`}
-                                key={'after'+ index+1}
-                                style={{ width: '100%' }}
-                                // onClick={onClick ? onClick : undefined}
-                              />
-                            </div>
-                    
-                  </div>
-                  
-                    
-                );
-              })}
-    </>
-        
-    
+    <div className="flex-1 h-2/3 overflow-auto bg-white">
+      {/* Gallery Grid */}
+      <div className="container mx-auto px-4 py-4">
+        {imagePairs.length > 0 ? (
+          imagePairs.map((pair, index) => (
+            <div
+              className="grid grid-cols-2 gap-4 mb-8"
+              key={`pair-${index}`}
+            >
+              {/* Before Image */}
+              <Image
+                className="ba-image object-contain w-full h-[300px] md:h-[400px]"
+                width={400}
+                height={300}
+                src={pair.before}
+                alt={`Before ${pair.title}`}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* After Image */}
+              <Image
+                className="ba-image object-contain w-full h-[300px] md:h-[400px]"
+                width={400}
+                height={300}
+                src={pair.after}
+                alt={`After ${pair.title}`}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          ))
+        ) : (
+          <p className="text-center text-lg">No images available.</p>
+        )}
+      </div>
+    </div>
   );
 };
 

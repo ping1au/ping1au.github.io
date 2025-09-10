@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import {createSharedPathnamesNavigation} from 'next-intl/navigation'
+//import {createSharedPathnamesNavigation} from 'next-intl/navigation'
+import Link from 'next/link';
 
 const Logo = () => {
   //update the size of the logo when the size of the screen changes
@@ -33,7 +34,7 @@ const Logo = () => {
   //   window.addEventListener("scroll", changeNavButton);
   // }, []);
   const locales = ['en', 'fr'] as const;
-  const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
+  //const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
   return (
     <>
     <div className="">

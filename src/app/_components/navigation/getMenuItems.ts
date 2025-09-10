@@ -1,74 +1,91 @@
+import { useTranslations } from 'next-intl';
 
-import { useTranslations } from 'next-intl'
+// Define known routes (resolved for static, templates for dynamic)
+type KnownRoute =
+  | '/'
+  | '/testimonials'
+  | '/transformations'
+  | '/services/renovations'
+  | '/services/interior_design'
+  | '/gallery/kitchens'
+  | '/gallery/bathrooms'
+  | '/gallery/outdoor'
+  | '/gallery/interior_finishing'
+  | '/gallery/electrical_and_plumbing'
+  | '/services/[slug]'  // Template for dynamic
+  | '/gallery/[slug]'; // Template for dynamic
 
 export interface MenuItem {
-    key: number;
-    title: string;
-    route?: string;
-    children?: MenuItem[];
+  key: number;
+  title: string;
+  route?: KnownRoute;  // Strict typing
+  children?: MenuItem[];
 }
 
 export const GetMenuItems = (): MenuItem[] => {
-    const t = useTranslations('Header');
-    return ([{
-      key:1,
+  const t = useTranslations('Header');
+  return [
+    {
+      key: 1,
       title: t('home'),
-      route: "/",
+      route: '/' as KnownRoute,
     },
     {
-      key:2,
-      title: t('testimonials'),
-      route: "/testimonials",
-    },
-    {
-      key:3,
-      title: t('gallery'),
+      key: 2,
+      title: t('services'),
       children: [
         {
-          key:31,
-          title: t('basements'),
-          route: "/gallery/basements",
+          key: 21,
+          title: t('renovations'),
+          route: '/services/renovations' as KnownRoute,
         },
         {
-          key:32,
-          title: t('bathrooms'),
-          route: "/gallery/bathrooms",
-        },
-        {
-          key:33,
-          title: t('fireplaces'),
-          route: "/gallery/fireplaces",
-        },
-        {
-          key:34,
-          title: t('kitchens'),
-          route: "/gallery/kitchens",
-        },
-        {
-          key:35,
-          title: t('outdoor'),
-          route: "/gallery/outdoor",
-        },
-        {
-          key:36,
-          title: t('stairs'),
-          route: "/gallery/stairs",
-        },
-        {
-          key:37,
-          title: t('tilings'),
-          route: "/gallery/tilings",
+          key: 22,
+          title: t('interior-design'),
+          route: '/services/interior_design' as KnownRoute,
         },
       ],
     },
     {
-      key:4,
-      title: t('before_and_after'),
-      route: "/before_and_after",
+      key: 3,
+      title: t('testimonials'),
+      route: '/testimonials' as KnownRoute,
     },
     {
-      key:5,
-      title: t('contact'),
-      route: "/contact",
-    }]);
-  }
+      key: 4,
+      title: t('gallery'),
+      children: [
+        {
+          key: 41,
+          title: t('kitchens'),
+          route: '/gallery/kitchens' as KnownRoute,
+        },
+        {
+          key: 42,
+          title: t('bathrooms'),
+          route: '/gallery/bathrooms' as KnownRoute,
+        },
+        {
+          key: 43,
+          title: t('outdoor'),
+          route: '/gallery/outdoor' as KnownRoute,
+        },
+        {
+          key: 44,
+          title: t('interior_finishing'),
+          route: '/gallery/interior_finishing' as KnownRoute,
+        },
+        {
+          key: 46,
+          title: t('electrical_and_plumbing'),
+          route: '/gallery/electrical_and_plumbing' as KnownRoute,
+        },
+      ],
+    },
+    {
+      key: 5,
+      title: t('transformations'),
+      route: '/transformations' as KnownRoute,
+    },
+  ];
+};

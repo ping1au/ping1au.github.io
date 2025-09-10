@@ -1,19 +1,22 @@
-"use client";
-import { useState } from "react";
-import Navbar from "./navbar";
-import Sidebar from "./sidebar";
+'use client';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Navbar from './navbar';
+import Sidebar from './sidebar';
 
-const Navigation = () => {
+export default function Navigation() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
   const toggle = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
+
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      {/* <Navbar toggle={toggle} pathname={pathname} /> */}
+      <Navbar toggle={toggle}/>
+      <Sidebar isOpen={isOpen} toggle={toggle} pathname={pathname} />
     </>
   );
-};
-
-export default Navigation;
+}

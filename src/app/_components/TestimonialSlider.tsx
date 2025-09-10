@@ -34,96 +34,38 @@ export default function FancyTestimonialsSlider({ testimonials }: { testimonials
   }, [])  
 
   return (
-    <div className="w-full mx-auto text-center">
-      {/* Testimonial image */}
-      {/* <div className="relative h-32">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-b before:from-indigo-500/25 before:via-indigo-500/5 before:via-25% before:to-indigo-500/0 before:to-75% before:rounded-full before:-z-10">
-          <div className="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
-            <div className='flex flex-col'>
-                {testimonials.map((testimonial, index) => (
-                //   <Transition
-                //     key={index}
-                //     show={active === index}
-                //     className="absolute inset-0 h-full -z-10"
-                //     enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
-                //     enterFrom="opacity-0 -rotate-[60deg]"
-                //     enterTo="opacity-100 rotate-0"
-                //     leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
-                //     leaveFrom="opacity-100 rotate-0"
-                //     leaveTo="opacity-0 rotate-[60deg]"
-                //   >
-                //    <Image className="relative top-11 left-1/2 -translate-x-1/2 rounded-full" src={testimonial.img} width={56} height={56} alt={testimonial.name} />
-                //   </Transition>
-                    <div>
+      <div className="relative text-center grid grid-cols-1 md:grid-cols-3 gap-4" ref={testimonialsRef}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className='w-full'>
+               {/* <div className="px-4 relative mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex gap-6 dark:bg-slate-800 dark:highlight-white/5"> */}
+                <div className="px-4 relative mx-auto bg-white flex gap-6">
+                    {/* <div  className="w-10 h-10 rounded-full  
+                            inline-flex items-center justify-center
+                            absolute -left-6
+                            bg-gray-100 text-gray-200 text-xl font-bold">
+                        {testimonial.name.charAt(0)}
+                    </div> */}
+                    <div className="flex flex-col py-5 items-center">
+                        {/* <div className="text-sm text-slate-900 before:content-['\201C'] after:content-['\201D']"> */}
+                          <div>
+                            <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path fill="none" d="M0 0h24v24H0z"/>
+                                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                                </g>
+                            </svg>
+                          </div>
+                          <div className="text-sm text-slate-900">
+                            {testimonial.quote}
+                          </div>
                         
-                       
-                    </div>
-                ))}
-            </div>
-            
-            
-          </div>
-        </div>
-      </div> */}
-      {/* Text */}
-      {/* <div className="mb-9 transition-all duration-150 delay-300 ease-in-out"> */}
-    <div>
-        <div className="relative text-justify" ref={testimonialsRef}>
-
-          {testimonials.map((testimonial, index) => (
-            // <Transition
-            //   key={index}
-            //   show={active === index}
-            //   enter="transition ease-in-out duration-500 delay-200 order-first"
-            //   enterFrom="opacity-0 -translate-x-4"
-            //   enterTo="opacity-100 translate-x-0"
-            //   leave="transition ease-out duration-300 delay-300 absolute"
-            //   leaveFrom="opacity-100 translate-x-0"
-            //   leaveTo="opacity-0 translate-x-4"
-            //   beforeEnter={() => heightFix()}
-            // >
-            //  <div key={index} className='flex-col'>
-            //     <div
-            //             className="w-10 h-10 rounded-full  
-            //                 inline-flex items-center justify-center  
-            //                 bg-gray-100 text-gray-200 text-xl font-bold" > 
-            //                 {testimonial.name.charAt(0)}
-            //             </div> 
-            //      <div className="text-sm text-slate-900 before:content-['\201C'] after:content-['\201D']">
-            //         {testimonial.quote}
-            //     </div>
-            //             <div className="text-sm py-4"><span>{testimonial.name}</span> <span>-</span> <span>{testimonial.role}</span></div>
-            //  </div>
-              
-            <div key={index} className='w-full'>
-                <div className="relative rounded-xl p-8">
-                    {/* <div className="px-4 relative mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex gap-6 dark:bg-slate-800 dark:highlight-white/5"> */}
-                    <div className="px-4 relative mx-auto bg-white ring-1 ring-black/5 rounded-xl flex gap-6">
-                        <div  className="w-10 h-10 rounded-full  
-                                inline-flex items-center justify-center
-                                absolute -left-6
-                                bg-gray-100 text-gray-200 text-xl font-bold">
-                            {testimonial.name.charAt(0)}
-                        </div>
-                        <div className="flex flex-col py-5">
-                            <div className="text-sm text-slate-900 before:content-['\201C'] after:content-['\201D']">
-                                {testimonial.quote}
-                            </div>
-                            
-                            <div className="text-sm pt-4 font-bold">
-                                <span>{testimonial.name}</span> <span>-</span> <span>{testimonial.role}</span>
-                            </div>
-                        </div>
+                          <div className="text-sm pt-4 font-bold">
+                              <span>{testimonial.name}</span> <span>-</span> <span>{testimonial.role}</span>
+                          </div>
                     </div>
                 </div>
-            </div>
-            
-            // </Transition>
-          ))}
-
-        </div>
+          </div>
+        ))}
       </div>
-      
-    </div>
   )
 }

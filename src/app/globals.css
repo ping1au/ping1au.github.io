@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
+  background-color: white;
+  /* background-image: url("/images/20220805_171610.jpg"); */
+    /* background-repeat: repeat; */
+  background-attachment: fixed; 
+  background-size:cover;
+  background-position: center;
 }
 
 div.slogan, div.contact {
@@ -30,7 +35,11 @@ div.footer-logo-container {
     background-color: white;
 }
 
-div.banner-container, div.contact-page-container, div.service-logo-container, .testimonial-container {
+.testimonial-page-container {
+    background-color: white;
+}
+
+div.banner-container, div.contact-page-container, div.service-logo-container {
     background-image: url("/images/bg.png");
     background-repeat: repeat;
     background-attachment: fixed; 
@@ -113,11 +122,11 @@ div.contact {
 } */
 
 ul.menu-list {
-  color: #F15A29;
+  color: #FFFFFF; /*no use prev value: #F15A29!*/
 }
 
 div.navbar-container {
-  color: #F15A29;
+  /* color: #FFFFFF; */
   margin-bottom: 0.4em;
 }
 
@@ -135,6 +144,26 @@ div.navbar-container {
   /* Make sure last word and icon will break ultimately */
   display: inline-flex;
   flex-wrap: wrap; 
+}
+
+.tagline {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  padding-bottom: 3;
+}
+
+div.icon-container {
+  text-align: center;
+  color: #f79e42;
+  font-weight:900;
+  font-size: larger;
+}
+
+div.contact-container {
+    font-weight: bold;
+    font-size: large;
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;
