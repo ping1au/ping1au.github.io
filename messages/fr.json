@@ -12,7 +12,7 @@
         "gallery": "Galerie",
         "kitchens": "Cuisines",
         "bathrooms": "Salles de Bain",
-        "outdoor": "De Plein Air",
+        "outdoor": "Extérieur",
         "interior_finishing": "Finition Intérieur",
         "windows_and_doors" : "Fenêtre et Portes",
         "electrical_and_plumbing": "Électricité et plomberie",
@@ -40,8 +40,8 @@
         "reno": "en main",
         "int": "Design",
         "design": "D’intérieur",
-        "intro1":"Du concept initial aux finitions finales, nous offrons une solution complète et unique adaptée aux besoins uniques de chaque client.",
-        "intro2":"Qu'il s'agisse d'une rénovation à petite échelle ou d'un développement à grande échelle, FDC vous couvre.",
+        "intro1":"Du concept initial aux finitions finales, nous offrons une solution complète et adaptée aux besoins uniques de chaque client.",
+        "intro2":"Qu'il s'agisse d'une rénovation à petite échelle ou d'un grand développement, FDC vous couvre.",
         "contact-us": "Contactez-nous",
 
         "left-pic-src": "/images/left_tag_fr.png",
@@ -68,8 +68,8 @@
             "description": "xxxxx"
         },
 
-        "renovations-intro": "FDC Renovations",
-        "interior-intro": "FDC Design",
+        "renovations-intro": "Renovations",
+        "interior-intro": "Interior Design",
 
         "renovation-header":{
             "header1": "Cuisines",

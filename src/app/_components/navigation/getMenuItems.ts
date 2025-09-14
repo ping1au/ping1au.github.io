@@ -11,7 +11,7 @@ type KnownRoute =
   | '/gallery/bathrooms'
   | '/gallery/outdoor'
   | '/gallery/interior_finishing'
-  | '/gallery/electrical_and_plumbing'
+  //| '/gallery/electrical_and_plumbing'
   | '/services/[slug]'  // Template for dynamic
   | '/gallery/[slug]'; // Template for dynamic
 
@@ -75,11 +75,11 @@ export const GetMenuItems = (): MenuItem[] => {
           title: t('interior_finishing'),
           route: '/gallery/interior_finishing' as KnownRoute,
         },
-        {
-          key: 46,
-          title: t('electrical_and_plumbing'),
-          route: '/gallery/electrical_and_plumbing' as KnownRoute,
-        },
+        // {
+        //   key: 46,
+        //   title: t('electrical_and_plumbing'),
+        //   route: '/gallery/electrical_and_plumbing' as KnownRoute,
+        // },
       ],
     },
     {

@@ -261,7 +261,6 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
           <div className="relative z-20">
             <div className="px-8 flex flex-col justify-center items-start w-full h-1/2 sticky top-0 z-20 text-white py-16 gap-4">
               <div className="font-black text-7xl">
-                <span className="italic">FDC </span>
                 <span>Renovations</span>
               </div>
               <div>{t('your-project')}</div>
@@ -273,10 +272,9 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
           <div className="relative z-20">
             <div className="px-8 flex flex-col justify-center items-start w-full h-1/2 sticky top-0 z-20 text-white py-16">
               <div className="font-black text-7xl">
-                <span className="italic">FDC </span>
-                <span className={parisienne.className}>Design</span>
+                <span>Interior Design</span>
               </div>
-              <div></div>
+              <div>{t('your-project')}</div>
             </div>
           </div>
         );

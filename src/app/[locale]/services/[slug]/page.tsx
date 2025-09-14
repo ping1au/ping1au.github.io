@@ -61,6 +61,7 @@ export default async function ServicePage({ params }: Props) {
       break;
     case 'interior_design':
       intro = t('interior-intro');
+      remarks = 'Your Project, our Passion!';
       prefix = 'design'
       totalImage = 4;
       break;
@@ -81,7 +82,7 @@ export default async function ServicePage({ params }: Props) {
     `/${locale}/gallery/bathrooms`,
     '/#',
     `/${locale}/gallery/outdoor`,
-    `/${locale}/gallery/electrical_and_plumbing`
+    '/#'
   ];
 
   const itemArray: { imageUrl: string; header: string; caption:string; headerUrl:string}[] = [];
@@ -112,7 +113,7 @@ export default async function ServicePage({ params }: Props) {
                     <div className='col-span-2 flex flex-col'>
                         <div>
                           {x.headerUrl === '/#' ? (
-                            <span className='text-xl text-[#f79e42] font-bold opacity-50 cursor-not-allowed'>
+                            <span className='text-xl text-[#f79e42] font-bold cursor-not-allowed'>
                               {x.header}
                             </span>
                           ) : (
