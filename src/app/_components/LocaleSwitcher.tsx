@@ -23,7 +23,7 @@ export default function LocaleSwitcher() {
 
   return (
     <select
-      className="bg-gray-50"
+      className="bg-orange-200 text-black p-2 rounded"
       value={locale}
       onChange={onLocaleChange}
       aria-label={t('selectLanguage')}

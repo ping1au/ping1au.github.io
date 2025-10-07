@@ -28,7 +28,6 @@ export const routing = defineRouting({
     '/gallery/bathrooms': { en: '/gallery/bathrooms', fr: '/gallery/bathrooms' },
     '/gallery/outdoor': { en: '/gallery/outdoor', fr: '/gallery/outdoor' },
     '/gallery/interior_finishing': { en: '/gallery/interior_finishing', fr: '/gallery/interior_finishing' },
-    '/gallery/electrical_and_plumbing': { en: '/gallery/electrical_and_plumbing', fr: '/gallery/electrical_and_plumbing' },
     '/services/[slug]': { en: '/services/[slug]', fr: '/services/[slug]' },
     '/gallery/[slug]': { en: '/gallery/[slug]', fr: '/gallery/[slug]' },
   },

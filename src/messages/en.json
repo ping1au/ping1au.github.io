@@ -14,6 +14,12 @@
         "bathrooms": "Bathrooms",
         "outdoor": "Outdoor",
         "interior_finishing": "Interior Finishing",
+
+        "kitchens-caption": "Whether you're adding a kitchen in a basement, expanding or just refreshing your existing space, we will guide you along the way.",
+        "bathrooms-caption": "Small powder room or large ensuite, FDC will handle your bath project from A to Z.",
+        "outdoor-caption": "We specialize in custom designs for Pergolas, Gazebos, Sheds using composite materials such as Trex and Timbertech and aluminum glass railings with professional finishes.",
+        "interior_finishing-caption": "Whether it's tiling, millwork, stairs, painting or custom pieces, we will produce the finest finishes.",
+        
         "windows_and_doors" : "Windows & Doors",
         "electrical_and_plumbing": "Electrical & Plumbing",
         "transformations": "Transformations",

@@ -52,10 +52,10 @@ export default function Home() {
 
                 {/* column 2: Introduction */}
                 <div className="grid items-center justify-center py-4 xs:px-4 sm: px-4 md:px-8 lg:px-16 xl:px-16 2xl:px-16">
-                    <p className='text-justify text-lg'>
+                    <p className='text-lg'>
                         {t('intro1')}
                     </p>
-                    <p className='text-justify text-lg pt-4'>
+                    <p className='text-lg pt-4'>
                         {t('intro2')}
                     </p>
                 </div>

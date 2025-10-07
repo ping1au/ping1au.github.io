@@ -64,7 +64,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
       setCurrentBackground(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
       interval = setInterval(() => {
         setCurrentBackground(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
-      }, 5000);
+      }, 2000);
     } else {
       const bg = backgroundMap[normalizedPathname] || "";
       setCurrentBackground(bg);
@@ -152,7 +152,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
               backgroundImage: `url(${currentBackground})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              opacity: 0.7,
+              opacity: 1.0,
             }}
           />
         )}
@@ -282,8 +282,12 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
         return (
           <div className="relative z-20 max-w-6xl mx-auto px-2 md:px-4">
             <div className="flex flex-col h-1/2 sticky top-0 z-20 text-white py-16">
-              <div className="font-black text-5xl py-4">{t('client-testimonials')}</div>
-              <div>{t('what-clients-say')}</div>
+              <div className="text-5xl py-4">
+                <span className="text-orange-500">{t('client-testimonials')}</span>
+              </div>
+              <div>
+                <span className="text-orange-500">{t('what-clients-say')}</span>
+              </div>
             </div>
           </div>
         );
@@ -305,10 +309,13 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
       case "/gallery/bathrooms":
       case "/gallery/outdoor":
       case "/gallery/interior_finishing":
-      case "/gallery/electrical_and_plumbing":
+      //case "/gallery/electrical_and_plumbing":
         return (
           <div className="relative z-20">
-            <div className="px-8 pt-8 h-1/3"><p className="text-5xl text-white text-bold">{t(`${normalizedPathname.split('/')[2]}`)}</p></div>
+            <div className="px-8 pt-8 h-1/3">
+              <p className="text-5xl text-white text-bold">{t(`${normalizedPathname.split('/')[2]}`)}</p>
+              <p className="pt-4 text-white text-bold">{t(`${normalizedPathname.split('/')[2]}-caption`)}</p>
+            </div>
           </div>
         );
       case "/transformations":

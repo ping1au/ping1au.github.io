@@ -9,9 +9,7 @@ const galleryPages = [
   'kitchens',
   'bathrooms',
   'outdoor',
-  'interior_finishing',
-  'windows_and_doors',
-  'electrical_and_plumbing'
+  'interior_finishing'
 ];
 
 interface PageProps {
@@ -45,25 +43,25 @@ export default async function GalleryPage({ params }: PageProps) {
                       'bathrooms',
                       'outdoor',
                       'interior_finishing',
-                      'electrical_and_plumbing'] as const;
+                      ] as const;
   if (!validSlugs.includes(slug as any)) {
     notFound();  // Static 404 for invalid slugs
   }
   const t = await getTranslations('GalleryPage');
 
-  console.log('Gallery slug:', slug);
-  console.log('Gallery locale:', locale);
+  // console.log('Gallery slug:', slug);
+  // console.log('Gallery locale:', locale);
 
   return (
-    <main className="bg-black px-4 py-4 h-auto">
-      <div
+    <main className="bg-black px-4 h-auto">
+      {/* <div
         className="flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg"
         style={{ whiteSpace: 'pre-wrap' }}
       >
         <div className="flex justify-center items-center gallery-header self-center text-base md:text-lg lg:text-xl xl:text-2xl">
           {t(`${slug}.title`)}
         </div>
-      </div>
+      </div> */}
       <Gallery folder={slug} images={imageFilenames} />
     </main>
   );
@@ -85,6 +83,5 @@ export async function generateStaticParams() {
     { slug: 'bathrooms', locale },
     { slug: 'outdoor', locale },
     { slug: 'interior_finishing', locale },
-    { slug: 'electrical_and_plumbing', locale },
   ]);
 }

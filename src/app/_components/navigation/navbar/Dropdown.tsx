@@ -51,8 +51,8 @@ const Dropdown: React.FC<Props> = ({ item, isOpen, onToggle, isActive }) => {
         {menuItems.map((child) => (
           <NavLink
             key={child.key}
-            className={`hover:text-orange-500 ${
-              isActive && isActive(child.route) ? 'text-[#f79e42]' : ''
+            className={`hover:text-gray-800 ${
+              isActive && isActive(child.route) ? 'text-white' : ''
             }`}
             href={child.route || '/'} // Fallback for safety
             locale={locale}

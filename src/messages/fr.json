@@ -13,6 +13,12 @@
         "kitchens": "Cuisines",
         "bathrooms": "Salles de Bain",
         "outdoor": "De Plein Air",
+
+        "kitchens-caption": "Que vous ajoutiez une cuisine dans un sous-sol, que vous agrandissiez ou que vous rafraîchissiez simplement votre espace existant, nous vous guiderons tout au long du processus.",
+        "bathrooms-caption": "Petite salle d'eau ou grande suite parentale, FDC s'occupera de votre projet de salle de bain de A à Z.",
+        "outdoor-caption": "Nous nous spécialisons dans les conceptions sur mesure pour les pergolas, les gazebos et les abris de jardin en utilisant des matériaux composites tels que Trex et Timbertech ainsi que des garde-corps en verre en aluminium avec des finitions professionnelles.",
+        "interior_finishing-caption": "Qu'il s'agisse de carrelage, de menuiserie, d'escaliers, de peinture ou de pièces sur mesure, nous produirons les plus belles finitions.",
+
         "interior_finishing": "Finition Intérieur",
         "windows_and_doors" : "Fenêtre et Portes",
         "electrical_and_plumbing": "Électricité et plomberie",

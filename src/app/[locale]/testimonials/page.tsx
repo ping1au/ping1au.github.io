@@ -108,7 +108,7 @@ export default async function TestimonialsPage({ params }: TestimonialsPageProps
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
-          opacity: 0.7,
+          opacity: 1.0,
           zIndex: -1,
         }}
       >
