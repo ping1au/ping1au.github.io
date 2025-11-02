@@ -40,7 +40,7 @@ const Dropdown: React.FC<Props> = ({ item, isOpen, onToggle, isActive }) => {
 
   return (
     <div className="relative hidden md:flex gap-x-6 menu-list z-50">
-      <button className="hover:text-orange-500" onClick={onToggle}>
+      <button className="" onClick={onToggle}>
         {item.title}
       </button>
       <div

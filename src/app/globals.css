@@ -95,12 +95,12 @@ div.gallery-header {
   padding: 1em;
 }
 
-div.gallery-container {
+/* div.gallery-container {
   
   font-family: 'Myriad Pro';
-  /* margin-left: 1em;
-  margin-right: 1em; */
-}
+  margin-left: 1em;
+  margin-right: 1em;
+} */
 
 div.footer-container {
   text-align: center;

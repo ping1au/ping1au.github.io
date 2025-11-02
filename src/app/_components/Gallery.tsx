@@ -86,13 +86,20 @@ const Gallery: React.FC<MyComponentProps> = ({ folder, images }) => {
   };
 
   return (
-    <div className="px-16 w-full min-h-screen gallery-container">
-        <div className="big-photo relative" key={selectedImage}> {/* Add key to force re-render */}
+  <div className="w-full flex-1 flex flex-col overflow-hidden min-h-0">
+  <div className="relative flex-1 min-h-0" key={selectedImage}> {/* Add key to force re-render */}
           {selectedImage && (
             <>
               <div
-                className="bg-contain bg-center h-screen w-full bg-no-repeat cursor-pointer"
-                style={{ backgroundImage: `url("${selectedImage}")` }}
+                className="bg-contain bg-center w-full h-screen bg-no-repeat cursor-pointer"
+                style={{
+                  backgroundImage: `url("${selectedImage}")`,
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center top',
+                  height: '100%',
+                  maxHeight: '100%',
+                  maxWidth: '100vw',
+                }}
                 onClick={() => {
                   const currentIndex = galleryArray.findIndex(item => item.imageUrl === selectedImage);
                   setIndex(currentIndex);
@@ -122,6 +129,8 @@ const Gallery: React.FC<MyComponentProps> = ({ folder, images }) => {
         plugins={[Zoom]}
         slides={slides}
         index={index}
+        styles={{ container: { maxHeight: '100vh', maxWidth: '100vw', overflow: 'hidden' } }}
+
       />
     </div>
   );

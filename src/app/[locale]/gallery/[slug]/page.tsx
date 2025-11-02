@@ -53,7 +53,7 @@ export default async function GalleryPage({ params }: PageProps) {
   // console.log('Gallery locale:', locale);
 
   return (
-    <main className="bg-black px-4 h-auto">
+    <main className="bg-black h-screen px-4 flex flex-col w-full">
       {/* <div
         className="flex flex-col justify-center items-center self-center text-base md:text-lg lg:text-lg xl:text-lg"
         style={{ whiteSpace: 'pre-wrap' }}
@@ -62,7 +62,13 @@ export default async function GalleryPage({ params }: PageProps) {
           {t(`${slug}.title`)}
         </div>
       </div> */}
-      <Gallery folder={slug} images={imageFilenames} />
+      {/* <div className="text-base md:text-lg lg:text-2xl xl:text-5xl text-white font-bold mt-4 mb-2">
+        {t(`${slug}.title`)}
+      </div>
+      <div>
+        {t(`${slug}.description`)}
+      </div>*/}
+        <Gallery folder={slug} images={imageFilenames} /> 
     </main>
   );
 }

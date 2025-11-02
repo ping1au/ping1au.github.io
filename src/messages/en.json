@@ -17,7 +17,7 @@
 
         "kitchens-caption": "Whether you're adding a kitchen in a basement, expanding or just refreshing your existing space, we will guide you along the way.",
         "bathrooms-caption": "Small powder room or large ensuite, FDC will handle your bath project from A to Z.",
-        "outdoor-caption": "We specialize in custom designs for Pergolas, Gazebos, Sheds using composite materials such as Trex and Timbertech and aluminum glass railings with professional finishes.",
+        "outdoor-caption": "We can enhance your outdoor living space with custom designed decks, enclosed rooms, gazebos and sheds.",
         "interior_finishing-caption": "Whether it's tiling, millwork, stairs, painting or custom pieces, we will produce the finest finishes.",
         
         "windows_and_doors" : "Windows & Doors",
@@ -85,10 +85,10 @@
         },
         "renovation-caption":{
             "caption1":"Cabinet & countertop installation, appliance fitting, and full layout reconfiguration.",
-            "caption2":"Drywall, painting, trim work, flooring, stairs, railings & fireplaces upgrades",
+            "caption2":"Drywall, painting, trim work, flooring, stairs, railings & fireplaces.",
             "caption3":"Complete bathroom remodels, plumbing upgrades, tiling, vanities, and fixture installation.",
             "caption4":"Installation and replacement of interior and exterior doors and energy-efficient windows.",
-            "caption5":"Decks, patios, pergolas & siding",
+            "caption5":"Enclosed 3 or 4 season rooms, composite & wood decks, pergolas, gazebos, sheds, siding (vinyl/aluminum/steel cladding/Canexel).",
             "caption6":"New system installations, code-compliant upgrades, and full rewiring or repiping."
         },
         "design-header":{
@@ -123,7 +123,7 @@
     "GalleryPage": {
         "kitchens": {
             "title": "Kitchens",
-            "description": "Unfinished basements, repairs due to water damage or floods, room or bathroom addition, new flooring."
+            "description": "Whether you're adding a kitchen in a basement, expanding or just refreshing your existing space, we will guide you along the way."
         },
         "bathrooms": {
             "title": "Bathrooms",
