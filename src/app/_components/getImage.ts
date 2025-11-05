@@ -17,7 +17,7 @@ export const getImages = async (folderName: string, locale: string): Promise<str
     const filePath = `public/images/${targetFolder}`;
     const imageDirectory = path.join(process.cwd(), filePath);
     const imageFilenames = await fs.readdir(imageDirectory);
-    return imageFilenames.filter((file) => file.endsWith('.webp')); // Ensure only .webp files
+    return imageFilenames.filter((file) => file.endsWith('.jpg')); // Ensure only .jpg files
   } catch (error) {
     console.error('Error reading image directory:', error);
     return [];

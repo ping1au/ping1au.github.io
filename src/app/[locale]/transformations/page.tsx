@@ -32,9 +32,9 @@ export default async function TransformationsPage({ params }: TransformationsPag
   const imageFilenames = beforeImageFilenames
     .filter((filename) => afterImageFilenames.includes(filename))
     .sort((a, b) => {
-      // Extract numeric part from filename (e.g., '1' from '1.webp')
-      const numA = parseInt(a.replace('.webp', ''), 10);
-      const numB = parseInt(b.replace('.webp', ''), 10);
+      // Extract numeric part from filename (e.g., '1' from '1.jpg')
+      const numA = parseInt(a.replace('.jpg', ''), 10);
+      const numB = parseInt(b.replace('.jpg', ''), 10);
       return numA - numB;
     });
 
